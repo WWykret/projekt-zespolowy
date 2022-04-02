@@ -17,10 +17,15 @@ df = pd.read_csv('training_data/pkp.csv', sep=',')
 df.drop(['<DATE>','<TICKER>','<PER>','<TIME>','<OPENINT>'], axis=1, inplace=True)
 df.columns = ['open', 'high', 'low', 'close', 'vol']
 
+columns_to_add = []
 for col_name in ['open', 'high', 'low', 'close']:
     for i in range(1, 1 + days_back):
-        df[f'{col_name}-prev-{i}'] = df[col_name].shift(i)
+        seria = df[col_name].shift(i)
+        col_to_add = seria.to_frame()
+        col_to_add.columns = columns = [f'{col_name}-prev-{i}']
+        columns_to_add.append(col_to_add)
 
+df = pd.concat([df, *columns_to_add], axis=1)
 df = df.iloc[days_back:, :]
 
 # SPLIT INTO DATA AND RESULT
