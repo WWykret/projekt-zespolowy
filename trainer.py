@@ -3,23 +3,17 @@ import pandas as pd
 from sklearn.svm import LinearSVR
 from sklearn.preprocessing import scale
 from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.metrics import max_error, explained_variance_score, r2_score
+from stock_svr import stockSVR
 
 
-def get_stock_predictor(
-    stock: str,
+def get_predictible_data(
     data: pd.DataFrame,
-    prediction_column: str,
     columns_to_remove: List[str] = None,
-    columns_to_remove_training: List[str] = None,
     columns_from_past_periods: List[str] = None,
     how_many_days_back: int = 30,
-    verbose: bool = False,
-) -> LinearSVR: # TODO zapisywanie parametrow uczenia i calych modeli
+) -> pd.DataFrame:
     if not columns_to_remove:
         columns_to_remove = []
-    if not columns_to_remove_training:
-        columns_to_remove_training = []
 
     data.drop(columns_to_remove, axis=1, inplace=True)
 
@@ -28,35 +22,44 @@ def get_stock_predictor(
             data, columns_from_past_periods, how_many_days_back
         )
 
-    # SPLIT INTO DATA AND RESULT
+    return data
 
-    input_data = data.drop(
-        list(set(columns_to_remove_training + [prediction_column])), axis=1
-    )
-    output_data = data[prediction_column]
 
-    X_train, X_test, y_train, y_test = train_test_split(
-        input_data, output_data, test_size=0.1, random_state=209
-    )
+def get_stock_predictor(
+    stock: str,
+    data: pd.DataFrame,
+    prediction_columns: List[str],
+    verbose: bool = False,
+) -> LinearSVR:  # TODO zapisywanie parametrow uczenia i calych modeli
+    input_data = data.drop(prediction_columns, axis=1)
+    output_data = {col : data[col] for col in prediction_columns}
 
-    # FIND BEST PARAMETERS
+    best_parameters = {}
+    ys_test = {}
+    final_svr = stockSVR()
+    for col in prediction_columns:
+        X_train, X_test, y_train, y_test = train_test_split(
+            input_data, output_data[col], test_size=0.1, random_state=209
+        )
+        ys_test[col] = y_test
+        # FIND BEST PARAMETERS
+        best_parameters[col] = find_best_parameters(X_train, y_train, "r2")
 
-    best_model_parameters = find_best_parameters(X_train, y_train, "r2")
+        # TRAIN AND TEST
 
-    # TRAIN AND TEST
-
-    svr = LinearSVR(
-        C=best_model_parameters["C"],
-        epsilon=best_model_parameters["epsilon"],
-        dual=False,
-        loss="squared_epsilon_insensitive",
-    )
-    svr.fit(X_train, y_train)
+        svr = LinearSVR(
+            C=best_parameters[col]["C"],
+            epsilon=best_parameters[col]["epsilon"],
+            dual=False,
+            loss="squared_epsilon_insensitive",
+        )
+        svr.fit(X_train, y_train)
+        final_svr.add_column_predictor(col, svr)
 
     if verbose:
-        display_info(best_model_parameters, svr, X_test, y_test)
+        display_info(best_parameters, final_svr, X_test, ys_test)
 
-    return svr
+    return final_svr
 
 
 def find_best_parameters(
@@ -110,18 +113,18 @@ def create_columns_from_pref_dates(
 
 
 def display_info(
-    best_model_parameters: Dict[str, float],
-    svr: LinearSVR,
+    best_model_parameters: Dict[str, Dict[str, float]],
+    svr: stockSVR,
     X_test: pd.DataFrame,
-    y_test: pd.DataFrame,
+    y_test: Dict[str, pd.DataFrame],
 ) -> None:
     print("Best parameters set found on development set: \n")
-    print(best_model_parameters)
+    for col, params in best_model_parameters.items():
+        print(f'{col}: {params}')
 
-    pred = svr.predict(X_test)
+    for col in svr.get_predictable_columns():
+        svr.show_column_score(col, X_test, y_test[col])
 
-    print(f"max error: {max_error(y_test, y_pred=pred)}")
-    print(f"evs: {explained_variance_score(y_test, y_pred=pred)}")
-    print(f"r2: {r2_score(y_test, y_pred=pred)}")
+    # pred = svr.predict(X_test)
 
-    print(pd.DataFrame({"pred": pred, "real": y_test}).head(30))
+    # print(pred.head(30))
