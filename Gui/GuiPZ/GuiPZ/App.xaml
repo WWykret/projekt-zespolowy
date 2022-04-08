@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:GuiPZ"
              xmlns:viewModel="clr-namespace:GuiPZ.MVVM.ViewModel"
              xmlns:view="clr-namespace:GuiPZ.MVVM.View"
+             xmlns:login="clr-namespace:GuiPZ.MVVM.View.Login"
+             xmlns:main="clr-namespace:GuiPZ.MVVM.View.Main"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          <ResourceDictionary>
@@ -11,32 +13,32 @@
                  <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
              </ResourceDictionary.MergedDictionaries>
              
-             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
-                 <view:HomeView/>
+             <DataTemplate DataType="{x:Type viewModel:Main.HomeViewModel}">
+                 <main:HomeView/>
              </DataTemplate>
              
-             <DataTemplate DataType="{x:Type viewModel:LoginViewModel}">
-                 <view:LoginView/>
+             <DataTemplate DataType="{x:Type viewModel:Login.LoginViewModel}">
+                 <login:LoginView/>
              </DataTemplate>
              
-             <DataTemplate DataType="{x:Type viewModel:UserStockViewModel}">
-                 <view:UserStockView/>
+             <DataTemplate DataType="{x:Type viewModel:Main.UserStockViewModel}">
+                 <main:UserStockView/>
              </DataTemplate>
              
-             <DataTemplate DataType="{x:Type viewModel:ManageStockViewModel}">
-                 <view:ManageStockView/>
+             <DataTemplate DataType="{x:Type viewModel:Main.ManageStockViewModel}">
+                 <main:ManageStockView/>
              </DataTemplate>
              
-             <DataTemplate DataType="{x:Type viewModel:PredictionsViewModel}">
-                 <view:PredictionsView/>
+             <DataTemplate DataType="{x:Type viewModel:Main.PredictionsViewModel}">
+                 <main:PredictionsView/>
              </DataTemplate>
              
-             <DataTemplate DataType="{x:Type viewModel:ProfilesViewModel}">
-                 <view:ProfilesView/>
+             <DataTemplate DataType="{x:Type viewModel:Login.ProfilesViewModel}">
+                 <login:ProfilesView/>
              </DataTemplate>
              
-             <DataTemplate DataType="{x:Type viewModel:RegistrationViewModel}">
-                 <view:RegistrationView/>
+             <DataTemplate DataType="{x:Type viewModel:Login.RegistrationViewModel}">
+                 <login:RegistrationView/>
              </DataTemplate>
          </ResourceDictionary>
     </Application.Resources>

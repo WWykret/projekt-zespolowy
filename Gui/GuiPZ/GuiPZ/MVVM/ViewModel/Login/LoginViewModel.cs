@@ -2,18 +2,18 @@
 using GuiPZ.Command;
 using GuiPZ.Navigation;
 
-namespace GuiPZ.MVVM.ViewModel;
+namespace GuiPZ.MVVM.ViewModel.Login;
 
 public class LoginViewModel : ViewModelBase
 {
-    public LoginViewModel(MainNav mainNav)
+    public LoginViewModel(ContextNavigation mainNav)
     {
-        _loginNav = new LoginNav();
+        _loginNav = new ContextNavigation();
         _loginNav.CurrentViewModel = new ProfilesViewModel(mainNav, _loginNav);
         _loginNav.CurrentViewModelChanged += OnCurrentViewModelChanged;
     }
     
-    private readonly LoginNav _loginNav;
+    private readonly ContextNavigation _loginNav;
     
     public ViewModelBase CurrentViewModel => _loginNav.CurrentViewModel;
     

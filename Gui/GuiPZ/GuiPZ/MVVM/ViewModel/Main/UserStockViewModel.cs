@@ -1,4 +1,4 @@
-﻿namespace GuiPZ.MVVM.ViewModel;
+﻿namespace GuiPZ.MVVM.ViewModel.Main;
 
 public class UserStockViewModel : ViewModelBase
 {

@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\App.xaml
 101685892586
 
-28-341141097
+24-1512161347
 1941645785384
 MainWindow.xaml;MVVM\View\Login\LoginView.xaml;MVVM\View\Login\ProfilesView.xaml;MVVM\View\Login\RegistrationView.xaml;MVVM\View\Main\HomeView.xaml;MVVM\View\Main\ManageStockView.xaml;MVVM\View\Main\PredictionsView.xaml;MVVM\View\Main\UserStockView.xaml;Theme\MenuButtonTheme.xaml;Theme\TextBoxTheme.xaml;
 
-True
+False
 

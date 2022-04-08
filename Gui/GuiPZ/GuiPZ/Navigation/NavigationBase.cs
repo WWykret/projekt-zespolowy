@@ -3,7 +3,7 @@ using GuiPZ.MVVM.ViewModel;
 
 namespace GuiPZ.Navigation;
 
-public abstract class NavBase
+public abstract class NavigationBase
 {
     public event Action CurrentViewModelChanged;
 

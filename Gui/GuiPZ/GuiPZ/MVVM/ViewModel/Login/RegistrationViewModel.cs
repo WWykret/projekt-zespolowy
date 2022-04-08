@@ -3,7 +3,7 @@ using System.Windows.Input;
 using GuiPZ.Command;
 using GuiPZ.Navigation;
 
-namespace GuiPZ.MVVM.ViewModel;
+namespace GuiPZ.MVVM.ViewModel.Login;
 
 public class RegistrationViewModel : ViewModelBase
 {
@@ -11,9 +11,9 @@ public class RegistrationViewModel : ViewModelBase
     
     public List<string> DataLol { get; set; }
 
-    public RegistrationViewModel(MainNav mainNav, LoginNav loginNav)
+    public RegistrationViewModel(ContextNavigation mainNav, ContextNavigation loginNav)
     {
-        ProfilesViewCommand = new NavLoginCommand<ProfilesViewModel>(loginNav, () => new ProfilesViewModel(mainNav, loginNav));
+        ProfilesViewCommand = new NavCommand<ProfilesViewModel>(loginNav, () => new ProfilesViewModel(mainNav, loginNav));
 
         DataLol = new List<string>()
         {
