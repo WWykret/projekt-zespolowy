@@ -24,11 +24,11 @@
             
             <ListBox ItemsSource="{Binding DataLol}"
                      ItemTemplate="{StaticResource AvatarTemplate}"
-                     Height="60" Width="320"
+                     Width="310"
                      Name="ListBoxPr">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <UniformGrid Columns="4"/>
+                        <UniformGrid Columns="5"/>
                     </ItemsPanelTemplate>
                 </ListBox.ItemsPanel>
             </ListBox>

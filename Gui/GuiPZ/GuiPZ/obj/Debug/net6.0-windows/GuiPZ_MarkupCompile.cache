@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\App.xaml
-12-890652467
-4-559557028
+14-653698043
+271814018485
 26-384020841
 1941645785384
-MainWindow.xaml;MVVM\View\Login\LoginView.xaml;MVVM\View\Login\ProfilesView.xaml;MVVM\View\Login\RegistrationView.xaml;MVVM\View\Main\HomeView.xaml;MVVM\View\Main\ManageStockView.xaml;MVVM\View\Main\PredictionsView.xaml;MVVM\View\Main\UserStockView.xaml;Theme\AvatarTemplate.xaml;Theme\MenuButtonTheme.xaml;Theme\ProfileTemplate.xaml;Theme\TextBoxTheme.xaml;
+MainWindow.xaml;MVVM\View\Login\LoginView.xaml;MVVM\View\Login\ProfilesView.xaml;MVVM\View\Login\RegistrationView.xaml;MVVM\View\Main\HomeView.xaml;MVVM\View\Main\ManageStockView.xaml;MVVM\View\Main\PredictionsView.xaml;MVVM\View\Main\UserStockView.xaml;Theme\AvatarTemplate.xaml;Theme\MenuButtonTheme.xaml;Theme\ProfileListTheme.xaml;Theme\ProfileTemplate.xaml;Theme\ScrollbarTheme.xaml;Theme\TextBoxTheme.xaml;
 
 False
 
