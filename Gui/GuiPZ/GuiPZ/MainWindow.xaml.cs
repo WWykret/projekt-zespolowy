@@ -37,5 +37,10 @@ namespace GuiPZ
         {
             Close();
         }
+        
+        private void Button_MinimizeApp(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
     }
 }

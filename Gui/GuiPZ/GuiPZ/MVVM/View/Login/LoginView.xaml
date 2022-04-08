@@ -15,7 +15,6 @@
         
         
         <ContentControl Grid.Column="1"
-                        Content="{Binding CurrentViewModel}"
-                        />
+                        Content="{Binding CurrentViewModel}"/>
     </Grid>
 </UserControl>

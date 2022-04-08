@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:GuiPZ.MVVM.View.Login"
              mc:Ignorable="d"
-             d:DesignHeight="670" d:DesignWidth="600">
+             d:DesignHeight="670" d:DesignWidth="600"
+             Background="Transparent">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -22,16 +23,19 @@
             
             <TextBox Width="100"></TextBox>
             
-            <ListBox ItemsSource="{Binding DataLol}"
-                     ItemTemplate="{StaticResource AvatarTemplate}"
-                     Width="310"
-                     Name="ListBoxPr">
-                <ListBox.ItemsPanel>
+            <ListView Name="ListBoxPr" 
+                     ItemsSource="{Binding DataLol}"
+                     ItemContainerStyle="{StaticResource AvatarListTheme}"
+                     Background="Transparent"
+                     BorderThickness="0"
+                     Width="500"
+                     Height="300">
+                <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
                         <UniformGrid Columns="5"/>
                     </ItemsPanelTemplate>
-                </ListBox.ItemsPanel>
-            </ListBox>
+                </ListView.ItemsPanel>
+            </ListView>
         </StackPanel>
     </Grid>
 </UserControl>

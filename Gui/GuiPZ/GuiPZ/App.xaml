@@ -17,6 +17,8 @@
                  <ResourceDictionary Source="Theme/AvatarTemplate.xaml"/>
                  <ResourceDictionary Source="Theme/ScrollbarTheme.xaml"/>
                  <ResourceDictionary Source="Theme/ProfileListTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/WindowButtonTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/AvatarListTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
              
              <DataTemplate DataType="{x:Type viewModel:Main.HomeViewModel}">
