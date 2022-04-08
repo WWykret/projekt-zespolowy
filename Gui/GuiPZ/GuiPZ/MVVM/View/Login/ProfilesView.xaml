@@ -8,15 +8,21 @@
              d:DesignHeight="670" d:DesignWidth="600">
     <Grid>
         <StackPanel>
-            <Button Width="300" Height="300"
+            <Button Width="100" Height="100"
                     Background="Aqua"
                     Content="loluwa"
                     Command="{Binding NavMainCommand}"/>
         
-            <Button Width="300" Height="300"
+            <Button Width="100" Height="100"
                     Background="Gray"
                     Content="bruhstersko"
                     Command="{Binding RegistrationViewCommand}"/>
+            
+            <ListBoxItem Content="{Binding ElementName=ListBoxPr, Path=SelectedItem}" ContentTemplate="{StaticResource ProfileTemplate}"/>
+            
+            <ListBox ItemsSource="{Binding DataLol}"
+                     ItemTemplate="{StaticResource ProfileTemplate}"
+                     Name="ListBoxPr"/>
         </StackPanel>
         
     </Grid>

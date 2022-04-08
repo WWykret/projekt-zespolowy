@@ -1,5 +1,8 @@
-﻿using System.Windows.Input;
+﻿using System.Collections.Generic;
+using System.Windows.Input;
 using GuiPZ.Command;
+using GuiPZ.Container;
+using GuiPZ.MVVM.Model;
 using GuiPZ.MVVM.ViewModel.Main;
 using GuiPZ.Navigation;
 
@@ -9,6 +12,8 @@ public class ProfilesViewModel : ViewModelBase
 {
     public ICommand NavMainCommand { get; }
     public ICommand RegistrationViewCommand { get; }
+    
+    public List<Profile> DataLol => DataContainer.Avatars;
 
     public ProfilesViewModel(ContextNavigation mainNav, ContextNavigation loginNav)
     {

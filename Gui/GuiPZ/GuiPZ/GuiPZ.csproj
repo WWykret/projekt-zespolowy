@@ -12,4 +12,23 @@
       <Folder Include="Font" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Data\Images\Avatars\Akszyli.png" />
+      <Content Include="Data\Images\Avatars\Akszyli.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Bakalar.png" />
+      <Content Include="Data\Images\Avatars\Bakalar.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Nfd.png" />
+      <Content Include="Data\Images\Avatars\Nfd.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Wojak.png" />
+      <Content Include="Data\Images\Avatars\Wojak.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
 </Project>

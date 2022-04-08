@@ -18,8 +18,20 @@
                 Command="{Binding ProfilesViewCommand}"/>
         
         <StackPanel Grid.Row="1">
-            <TextBox Width="100"/>
-            <ListBox ItemsSource="{Binding DataLol}"/>
+            
+            
+            <TextBox Width="100"></TextBox>
+            
+            <ListBox ItemsSource="{Binding DataLol}"
+                     ItemTemplate="{StaticResource AvatarTemplate}"
+                     Height="60" Width="320"
+                     Name="ListBoxPr">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="4"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
         </StackPanel>
     </Grid>
 </UserControl>

@@ -8,10 +8,14 @@
              xmlns:main="clr-namespace:GuiPZ.MVVM.View.Main"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         <ResourceDictionary>
-             <ResourceDictionary.MergedDictionaries>
+        
+        <ResourceDictionary>
+            
+            <ResourceDictionary.MergedDictionaries>
                  <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
-             </ResourceDictionary.MergedDictionaries>
+                 <ResourceDictionary Source="Theme/ProfileTemplate.xaml"/>
+                 <ResourceDictionary Source="Theme/AvatarTemplate.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
              
              <DataTemplate DataType="{x:Type viewModel:Main.HomeViewModel}">
                  <main:HomeView/>
