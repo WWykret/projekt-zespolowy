@@ -1,0 +1,43 @@
+﻿<Application x:Class="GuiPZ.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GuiPZ"
+             xmlns:viewModel="clr-namespace:GuiPZ.MVVM.ViewModel"
+             xmlns:view="clr-namespace:GuiPZ.MVVM.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         <ResourceDictionary>
+             <ResourceDictionary.MergedDictionaries>
+                 <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+             </ResourceDictionary.MergedDictionaries>
+             
+             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+                 <view:HomeView/>
+             </DataTemplate>
+             
+             <DataTemplate DataType="{x:Type viewModel:LoginViewModel}">
+                 <view:LoginView/>
+             </DataTemplate>
+             
+             <DataTemplate DataType="{x:Type viewModel:UserStockViewModel}">
+                 <view:UserStockView/>
+             </DataTemplate>
+             
+             <DataTemplate DataType="{x:Type viewModel:ManageStockViewModel}">
+                 <view:ManageStockView/>
+             </DataTemplate>
+             
+             <DataTemplate DataType="{x:Type viewModel:PredictionsViewModel}">
+                 <view:PredictionsView/>
+             </DataTemplate>
+             
+             <DataTemplate DataType="{x:Type viewModel:ProfilesViewModel}">
+                 <view:ProfilesView/>
+             </DataTemplate>
+             
+             <DataTemplate DataType="{x:Type viewModel:RegistrationViewModel}">
+                 <view:RegistrationView/>
+             </DataTemplate>
+         </ResourceDictionary>
+    </Application.Resources>
+</Application>
