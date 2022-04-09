@@ -15,7 +15,7 @@ public class RegistrationViewModel : ViewModelBase
 {
     public ICommand ProfilesViewCommand { get; }
 
-    
+    public ICommand AddProfileCommand { get; }
 
     public List<Avatar> Avatars => DataContainer.Avatars;
 
@@ -40,29 +40,35 @@ public class RegistrationViewModel : ViewModelBase
     public RegistrationViewModel(ContextNavigation mainNav, ContextNavigation loginNav)
     {
         ProfilesViewCommand = new NavCommand<ProfilesViewModel>(loginNav, () => new ProfilesViewModel(mainNav, loginNav));
+
+        AddProfileCommand =
+            new AddProfileCommand<ProfilesViewModel>(loginNav, () => new ProfilesViewModel(mainNav, loginNav), this);
+        
         
         CurrentProfile = new Profile()
         {
-            Name = "Joe",
-            Img = new Uri("pack://application:,,,/GuiPz;component/Data/Images/Avatars/Nfd.png")
+            Name = null,
+            Img = null
         };
 
-        Texto = "Joelgh";
+        ProfileName = "NewProfile";
         
         
         
         SelectedAvatar = Avatars.First();
+        
+        
     }
 
-    private string _texto;
+    private string _profileName;
 
-    public string Texto
+    public string ProfileName
     {
-        get => _texto;
+        get => _profileName;
         set
         {
-            _texto = value;
-            OnPropertyChanged(nameof(Texto));
+            _profileName = value;
+            OnPropertyChanged(nameof(ProfileName));
 
             CurrentProfile = new Profile()
             {

@@ -13,7 +13,6 @@
             
             <ResourceDictionary.MergedDictionaries>
                  <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
-                 <ResourceDictionary Source="Theme/ProfileTemplate.xaml"/>
                  <ResourceDictionary Source="Theme/ScrollbarTheme.xaml"/>
                  <ResourceDictionary Source="Theme/ProfileListTheme.xaml"/>
                  <ResourceDictionary Source="Theme/WindowButtonTheme.xaml"/>

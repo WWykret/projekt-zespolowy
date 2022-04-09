@@ -31,8 +31,10 @@ public class DataContainer
         Avatars = Directory.GetFiles("./Data/Images/Avatars")
             .Select(x => new Avatar() { Img = new Uri(string.Concat("pack://application:,,,/GuiPZ;component", x.AsSpan(1))) })
             .ToList();
-        
+    }
 
-
+    public static void AddProfile(Profile profile)
+    {
+        Profiles.Add(profile);
     }
 }

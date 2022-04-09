@@ -49,13 +49,14 @@
                                  Height="40"
                                  HorizontalAlignment="Center"
                                  Margin="5"
-                                 Text="{Binding Texto, UpdateSourceTrigger=PropertyChanged}"
+                                 Text="{Binding ProfileName, UpdateSourceTrigger=PropertyChanged}"
                                  Grid.Column="0"/>
                         
                         <StackPanel Grid.Column="1">
-                            <Button Height="30" Width="60"/>
+                            <Button Height="30" Width="60"
+                                    Command="{Binding AddProfileCommand}"/>
                             
-                            <Button Width="60" Height="30" Grid.Row="0"
+                            <Button Width="60" Height="30"
                                     Background="Coral"
                                     Content="bruh"
                                     Command="{Binding ProfilesViewCommand}"/>
