@@ -18,10 +18,10 @@
                     Content="bruhstersko"
                     Command="{Binding RegistrationViewCommand}"/>
             
-            <ListBoxItem Content="{Binding ElementName=ListBoxPr, Path=SelectedItem}" ContentTemplate="{StaticResource ProfileTemplate}"/>
+            <ListViewItem DataContext="{Binding ElementName=ListBoxPr, Path=SelectedItem}" Style="{StaticResource ProfileListTheme}"/>
             
-            <ListBox ItemsSource="{Binding DataLol}"
-                     ItemTemplate="{StaticResource ProfileTemplate}"
+            <ListView ItemsSource="{Binding Profiles}"
+                     ItemContainerStyle="{StaticResource ProfileListTheme}"
                      Name="ListBoxPr"/>
         </StackPanel>
         

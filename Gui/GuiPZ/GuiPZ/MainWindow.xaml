@@ -9,11 +9,15 @@
         Title="SOP Stocks" Height="700" Width="1200"
         ResizeMode="NoResize"
         WindowStyle="None"
-        Background="#36393F"
         AllowsTransparency="True">
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
+    
+    <Window.Background>
+        <ImageBrush Stretch="Fill" ImageSource="pack://application:,,,/GuiPz;component/Data/Images/Assets/MainBackground.png"/>
+    </Window.Background>
+    
     
     
     <Grid>

@@ -4,7 +4,7 @@
            x:Key="AvatarListTheme">
         <Style.Triggers>
             <Trigger Property="IsSelected" Value="True">
-                <Setter Property="Background" Value="#292B2F"/>
+                <Setter Property="Background" Value="#797B7F"/>
             </Trigger>
         </Style.Triggers>
         
@@ -18,12 +18,16 @@
                             Height="90" Width="90"
                             CornerRadius="4"
                             Margin="2">
+                        
+                        
                         <Border Width="80" Height="80"
                                 CornerRadius="4">
                             <Border.Background>
                                 <ImageBrush Stretch="Fill" ImageSource="{Binding Img}"/>
                             </Border.Background>
                         </Border>
+                        
+                        
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

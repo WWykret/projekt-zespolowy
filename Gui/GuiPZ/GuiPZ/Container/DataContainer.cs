@@ -8,13 +8,13 @@ namespace GuiPZ.Container;
 
 public class DataContainer
 {
-    public static List<Profile> Avatars { get; set; }
+    public static List<Profile> Profiles { get; set; }
     
-    public static List<Avatar> Avatars2 { get; set; }
+    public static List<Avatar> Avatars { get; set; }
 
-    public static void SetAvatars()
+    public static void InitializeContainers()
     {
-        Avatars = new()
+        Profiles = new()
         {
             new Profile()
             {
@@ -28,9 +28,11 @@ public class DataContainer
             }
         };
 
-        Avatars2 = Directory.GetFiles("./Data/Images/Avatars")
+        Avatars = Directory.GetFiles("./Data/Images/Avatars")
             .Select(x => new Avatar() { Img = new Uri(string.Concat("pack://application:,,,/GuiPZ;component", x.AsSpan(1))) })
             .ToList();
+        
+
 
     }
 }

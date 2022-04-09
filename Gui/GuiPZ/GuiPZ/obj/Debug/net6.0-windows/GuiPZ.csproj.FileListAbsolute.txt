@@ -39,7 +39,6 @@ C:\Users\FPro\RiderProjects\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MVVM\View\Main\
 C:\Users\FPro\RiderProjects\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MVVM\View\Main\UserStockView.baml
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\GuiPZ.csproj.AssemblyReference.cache
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\MenuButtonTheme.baml
-C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\TextBoxTheme.baml
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MVVM\View\Login\LoginView.g.cs
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MVVM\View\Login\ProfilesView.g.cs
@@ -81,7 +80,6 @@ C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-wind
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Avatars\Bakalar.png
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Avatars\Nfd.png
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\GuiPZ_Content.g.cs
-C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\AvatarTemplate.baml
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Avatars\Wojak.png
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Avatars\Chicken.png
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Avatars\Dog.png
@@ -110,3 +108,5 @@ C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-wind
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\ScrollbarTheme.baml
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\WindowButtonTheme.baml
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\AvatarListTheme.baml
+C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\TextBoxRegistrationTheme.baml
+C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Assets\MainBackground.png

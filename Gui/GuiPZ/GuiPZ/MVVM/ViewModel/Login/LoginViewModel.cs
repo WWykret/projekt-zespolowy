@@ -1,5 +1,6 @@
 ﻿using System.Windows.Input;
 using GuiPZ.Command;
+using GuiPZ.Container;
 using GuiPZ.Navigation;
 
 namespace GuiPZ.MVVM.ViewModel.Login;
@@ -11,6 +12,8 @@ public class LoginViewModel : ViewModelBase
         _loginNav = new ContextNavigation();
         _loginNav.CurrentViewModel = new ProfilesViewModel(mainNav, _loginNav);
         _loginNav.CurrentViewModelChanged += OnCurrentViewModelChanged;
+        
+        DataContainer.InitializeContainers();
     }
     
     private readonly ContextNavigation _loginNav;

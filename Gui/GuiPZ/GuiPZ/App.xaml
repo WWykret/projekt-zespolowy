@@ -14,11 +14,11 @@
             <ResourceDictionary.MergedDictionaries>
                  <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
                  <ResourceDictionary Source="Theme/ProfileTemplate.xaml"/>
-                 <ResourceDictionary Source="Theme/AvatarTemplate.xaml"/>
                  <ResourceDictionary Source="Theme/ScrollbarTheme.xaml"/>
                  <ResourceDictionary Source="Theme/ProfileListTheme.xaml"/>
                  <ResourceDictionary Source="Theme/WindowButtonTheme.xaml"/>
                  <ResourceDictionary Source="Theme/AvatarListTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/TextBoxRegistrationTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
              
              <DataTemplate DataType="{x:Type viewModel:Main.HomeViewModel}">

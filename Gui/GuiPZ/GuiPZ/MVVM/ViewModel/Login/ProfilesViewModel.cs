@@ -13,7 +13,7 @@ public class ProfilesViewModel : ViewModelBase
     public ICommand NavMainCommand { get; }
     public ICommand RegistrationViewCommand { get; }
     
-    public List<Profile> DataLol => DataContainer.Avatars;
+    public List<Profile> Profiles => DataContainer.Profiles;
 
     public ProfilesViewModel(ContextNavigation mainNav, ContextNavigation loginNav)
     {

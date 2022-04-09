@@ -7,35 +7,63 @@
              mc:Ignorable="d"
              d:DesignHeight="670" d:DesignWidth="600"
              Background="Transparent">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+    <Border CornerRadius="16"
+            Background="#36393F"
+            VerticalAlignment="Center">
         
-        <Button Width="30" Height="30" Grid.Row="0"
-                Background="Coral"
-                Content="bruh"
-                Command="{Binding ProfilesViewCommand}"/>
-        
-        <StackPanel Grid.Row="1">
-            
-            
-            <TextBox Width="100"></TextBox>
-            
-            <ListView Name="ListBoxPr" 
-                     ItemsSource="{Binding DataLol}"
-                     ItemContainerStyle="{StaticResource AvatarListTheme}"
-                     Background="Transparent"
-                     BorderThickness="0"
-                     Width="500"
-                     Height="300">
-                <ListView.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <UniformGrid Columns="5"/>
-                    </ItemsPanelTemplate>
-                </ListView.ItemsPanel>
-            </ListView>
-        </StackPanel>
-    </Grid>
+        <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                
+                
+                <StackPanel Grid.Row="1">
+                    
+                    
+                    <ListViewItem DataContext="{Binding CurrentProfile}"
+                              Style="{StaticResource ProfileListTheme}"/>
+                    
+                    <ListView ItemsSource="{Binding Avatars}"
+                             SelectedItem="{Binding SelectedAvatar}"
+                             ItemContainerStyle="{StaticResource AvatarListTheme}"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Width="500"
+                             Height="300">
+                        <ListView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Columns="5"/>
+                            </ItemsPanelTemplate>
+                        </ListView.ItemsPanel>
+                    </ListView>
+                    
+                    
+                    <Grid Margin="50, 0, 50, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <TextBox Width="200"
+                                 Height="40"
+                                 HorizontalAlignment="Center"
+                                 Margin="5"
+                                 Text="{Binding Texto, UpdateSourceTrigger=PropertyChanged}"
+                                 Grid.Column="0"/>
+                        
+                        <StackPanel Grid.Column="1">
+                            <Button Height="30" Width="60"/>
+                            
+                            <Button Width="60" Height="30" Grid.Row="0"
+                                    Background="Coral"
+                                    Content="bruh"
+                                    Command="{Binding ProfilesViewCommand}"/>
+                        </StackPanel>
+                        
+                    </Grid>
+                    
+                </StackPanel>
+            </Grid>
+    </Border>
 </UserControl>

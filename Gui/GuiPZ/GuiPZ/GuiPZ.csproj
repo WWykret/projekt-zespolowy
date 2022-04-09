@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Folder Include="Data\Images\Assets" />
       <Folder Include="Data\Images\Avatars" />
       <Folder Include="Font" />
     </ItemGroup>
@@ -119,6 +120,10 @@
       </Content>
       <None Remove="Data\Images\Avatars\Majk.png" />
       <Content Include="Data\Images\Avatars\Majk.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Assets\MainBackground.png" />
+      <Content Include="Data\Images\Assets\MainBackground.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
     </ItemGroup>
