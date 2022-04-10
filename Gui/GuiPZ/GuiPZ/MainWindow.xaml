@@ -9,7 +9,8 @@
         Title="SOP Stocks" Height="700" Width="1200"
         ResizeMode="NoResize"
         WindowStyle="None"
-        AllowsTransparency="True">
+        AllowsTransparency="True"
+        Icon="Data/Images/Assets/Icon.png">
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>

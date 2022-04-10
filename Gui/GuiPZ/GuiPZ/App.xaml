@@ -18,6 +18,8 @@
                  <ResourceDictionary Source="Theme/WindowButtonTheme.xaml"/>
                  <ResourceDictionary Source="Theme/AvatarListTheme.xaml"/>
                  <ResourceDictionary Source="Theme/TextBoxRegistrationTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/BasicButtonTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/ProfileWithDeleteListTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
              
              <DataTemplate DataType="{x:Type viewModel:Main.HomeViewModel}">

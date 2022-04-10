@@ -9,11 +9,13 @@ public class LoginViewModel : ViewModelBase
 {
     public LoginViewModel(ContextNavigation mainNav)
     {
+        DataContainer.InitializeContainers();
+        
         _loginNav = new ContextNavigation();
         _loginNav.CurrentViewModel = new ProfilesViewModel(mainNav, _loginNav);
         _loginNav.CurrentViewModelChanged += OnCurrentViewModelChanged;
         
-        DataContainer.InitializeContainers();
+        
     }
     
     private readonly ContextNavigation _loginNav;

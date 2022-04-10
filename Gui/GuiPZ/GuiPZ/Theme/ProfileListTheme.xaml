@@ -36,7 +36,7 @@
                             <Border Grid.Column="1"
                                     BorderThickness="5"
                                     BorderBrush="Transparent"
-                                    Background="#AED6DC">
+                                    Background="DarkGray">
                                 <Label Content="{Binding Name}"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Center"

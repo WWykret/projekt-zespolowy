@@ -109,3 +109,6 @@ C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-wind
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\AvatarListTheme.baml
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\TextBoxRegistrationTheme.baml
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Assets\MainBackground.png
+C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\BasicButtonTheme.baml
+C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Assets\Icon.png
+C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\ProfileWithDeleteListTheme.baml

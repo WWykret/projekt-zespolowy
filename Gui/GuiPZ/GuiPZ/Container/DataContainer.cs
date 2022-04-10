@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using GuiPZ.MVVM.Model;
@@ -8,7 +9,7 @@ namespace GuiPZ.Container;
 
 public class DataContainer
 {
-    public static List<Profile> Profiles { get; set; }
+    public static ObservableCollection<Profile> Profiles { get; set; }
     
     public static List<Avatar> Avatars { get; set; }
 

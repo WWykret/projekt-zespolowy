@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows.Input;
 using GuiPZ.Command;
 using GuiPZ.Container;
@@ -13,7 +15,23 @@ public class ProfilesViewModel : ViewModelBase
     public ICommand NavMainCommand { get; }
     public ICommand RegistrationViewCommand { get; }
     
-    public List<Profile> Profiles => DataContainer.Profiles;
+    public ICommand DeleteProfileCommand { get; }
+
+    public ObservableCollection<Profile> Profiles => DataContainer.Profiles;
+
+
+
+    private Profile _selectedProfile;
+
+    public Profile SelectedProfile
+    {
+        get => _selectedProfile;
+        set
+        {
+            _selectedProfile = value;
+            OnPropertyChanged(nameof(SelectedProfile));
+        }
+    }
 
     public ProfilesViewModel(ContextNavigation mainNav, ContextNavigation loginNav)
     {
@@ -21,5 +39,11 @@ public class ProfilesViewModel : ViewModelBase
         
         RegistrationViewCommand =
             new NavCommand<RegistrationViewModel>(loginNav, () => new RegistrationViewModel(mainNav, loginNav));
+
+        DeleteProfileCommand = new DeleteProfileCommand(this);
+        
+        SelectedProfile = Profiles.First();
+        
     }
+    
 }

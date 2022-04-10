@@ -77,10 +77,7 @@ public class RegistrationViewModel : ViewModelBase
             };
         }
     }
-
-
-
-
+    
     private Profile _currentProfile;
 
     public Profile CurrentProfile

@@ -35,5 +35,6 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("data/images/avatars/gustavo.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("data/images/avatars/majk.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("data/images/assets/mainbackground.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("data/images/assets/icon.png")]
 
 
