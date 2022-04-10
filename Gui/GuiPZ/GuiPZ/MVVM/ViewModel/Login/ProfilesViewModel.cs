@@ -35,7 +35,7 @@ public class ProfilesViewModel : ViewModelBase
 
     public ProfilesViewModel(ContextNavigation mainNav, ContextNavigation loginNav)
     {
-        NavMainCommand = new NavCommand<HomeViewModel>(mainNav,() => new HomeViewModel(mainNav));
+        NavMainCommand = new NavCommand<HomeViewModel>(mainNav,() => new HomeViewModel(mainNav, SelectedProfile));
         
         RegistrationViewCommand =
             new NavCommand<RegistrationViewModel>(loginNav, () => new RegistrationViewModel(mainNav, loginNav));

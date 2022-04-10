@@ -7,29 +7,95 @@
              mc:Ignorable="d"
              d:DesignHeight="670" d:DesignWidth="600">
     <Grid>
-        <StackPanel>
-            <Button Width="100" Height="100"
-                    Background="Aqua"
-                    Content="loluwa"
-                    Command="{Binding NavMainCommand}"/>
-        
-            <Button Width="100" Height="100"
-                    Background="Gray"
-                    Content="bruhstersko"
-                    Command="{Binding RegistrationViewCommand}"/>
+        <StackPanel VerticalAlignment="Center">
             
-            <ListViewItem DataContext="{Binding SelectedProfile}" 
-                          Style="{StaticResource ProfileListTheme}"/>
+        
+            
+            
+            
+            
+            <Button Command="{Binding NavMainCommand}"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+                <Button.Content>
+                    <Border Height="80" Width="300"
+                            CornerRadius="4"
+                            Margin="2"
+                            DataContext="{Binding SelectedProfile}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <Border Width="70" Height="70"
+                                    CornerRadius="10"
+                                    HorizontalAlignment="Center"
+                                    Grid.Column="0">
+                                <Border.Background>
+                                    <ImageBrush Stretch="Fill" ImageSource="{Binding Img}"/>
+                                </Border.Background>
+                            </Border>
+                            
+                            <Border Grid.Column="1"
+                                    BorderThickness="5"
+                                    BorderBrush="Transparent"
+                                    Background="DarkGray">
+                                <Label Content="{Binding Name}"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       FontWeight="Bold"/>
+                            </Border>
+                            
+                            
+                        </Grid>
+                    </Border>
+                    <!-- <ListViewItem DataContext="{Binding SelectedProfile}" -->
+                    <!--               Style="{StaticResource ProfileListTheme}" -->
+                    <!--               Panel.ZIndex="0"/> -->
+                </Button.Content>
+            </Button>
+            
+            
+            
             
             <ListView ItemsSource="{Binding Profiles}"
                       SelectedItem="{Binding SelectedProfile}"
-                     ItemContainerStyle="{StaticResource ProfileWithDeleteListTheme}"
-                      Background="Transparent"
-                     BorderThickness="0"
-                     Height="200">
+                      ItemContainerStyle="{StaticResource ProfileWithDeleteListTheme}"
+                      Background="Gray"
+                      BorderThickness="0" Height="200"
+                      HorizontalAlignment="Center">
             </ListView>
             
-            
+            <Button Width="90" Height="30"
+                    Content="Register"
+                    Command="{Binding RegistrationViewCommand}">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="Chocolate"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="Foreground" Value="DarkGray"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Margin" Value="5"/>
+        
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Brown"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                                    
+                </Button.Style>
+            </Button>
         </StackPanel>
         
     </Grid>

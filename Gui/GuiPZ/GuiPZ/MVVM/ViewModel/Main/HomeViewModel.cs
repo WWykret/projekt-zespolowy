@@ -1,5 +1,6 @@
 ﻿using System.Windows.Input;
 using GuiPZ.Command;
+using GuiPZ.MVVM.Model;
 using GuiPZ.MVVM.ViewModel.Login;
 using GuiPZ.Navigation;
 
@@ -9,7 +10,8 @@ public class HomeViewModel : ViewModelBase
 {
     public ICommand NavMainCommand { get; }
 
-    public HomeViewModel(ContextNavigation mainNav)
+    private Profile Profile { get; set; }
+    public HomeViewModel(ContextNavigation mainNav, Profile profile)
     {
         NavMainCommand = new NavCommand<LoginViewModel>(mainNav, () => new LoginViewModel(mainNav));
         
@@ -20,6 +22,8 @@ public class HomeViewModel : ViewModelBase
         PredictionsViewCommand = new NavCommand<PredictionsViewModel>(_stockNav, () => new PredictionsViewModel());
         UserViewCommand = new NavCommand<UserStockViewModel>(_stockNav, () => new UserStockViewModel());
         ManageViewCommand = new NavCommand<ManageStockViewModel>(_stockNav, () => new ManageStockViewModel());
+
+        Profile = profile;
     }
 
     public ICommand PredictionsViewCommand { get; }

@@ -20,6 +20,7 @@
                  <ResourceDictionary Source="Theme/TextBoxRegistrationTheme.xaml"/>
                  <ResourceDictionary Source="Theme/BasicButtonTheme.xaml"/>
                  <ResourceDictionary Source="Theme/ProfileWithDeleteListTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/ProfileButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
              
              <DataTemplate DataType="{x:Type viewModel:Main.HomeViewModel}">
