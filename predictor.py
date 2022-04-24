@@ -2,8 +2,8 @@ import pandas as pd
 import trainer
 import pickle
 from stock_svr import stockSVR
-from os import listdir, mkdir
-from os.path import isdir
+from os import listdir, mkdir, remove
+from os.path import isdir, isfile
 import time
 
 # CONSTS
@@ -12,62 +12,65 @@ days_back = 30
 models_dir = "trained"
 data_dir = "training_data"
 min_useful_size = 1500
+not_important_columns = ["Data"]
+repeated_columns = ["Otwarcie", "Najwyzszy", "Najnizszy", "Zamkniecie"]#, "Wolumen"]
+prediction_columns = ["Zamkniecie", "Najwyzszy", "Najnizszy"]
 
+def train_model(stock_symbol: str, timed: bool=False, verbose: bool=False) -> bool:
+    start = time.time()
 
-def func():
+    if not has_training_data(stock_symbol):
+        return False
+
+    stock_code = stock_symbol.lower()
+
+    print(f"Trainig {stock_code}...")
+
     if not isdir(models_dir):
         mkdir(models_dir)
 
-    # all_svrs = list(filter(lambda x: x[-4:] == '.svr', listdir(models_dir)))
-    all_svrs = [file for file in listdir(models_dir) if file[-4:] == ".svr"]
+    # REMOVE OLD SVR IF EXISTS
 
-    total_time = 0
-    for stock in ["11b", "ale", "cdr", "pkn", "pkp", "xtb"]:
+    if isfile(f"{models_dir}/{stock_code}.svr"):
+        remove(f"{models_dir}/{stock_code}.svr")
 
-        print(f"working on {stock}...")
-        # CHECK IF STOCK ALREADY HAS SVR
+    # LOAD RAW DATA AND PROCESS ID
 
-        if f"{stock}.svr" in all_svrs:
-            continue
+    df = pd.read_csv(f"{data_dir}/{stock_code}.csv", sep=",")
 
-        start = time.time()
+    predictable_data = trainer.get_predictible_data(
+        df,
+        columns_to_remove=not_important_columns,
+        columns_from_past_periods=repeated_columns,
+    )
 
-        # LOAD RAW DATA
+    # TRAIN MODEL
 
-        df = pd.read_csv(f"{data_dir}/{stock}.csv", sep=",")
+    svr = trainer.get_stock_predictor(
+        predictable_data,
+        prediction_columns=prediction_columns,
+        verbose=verbose,
+    )
 
-        # MODIFY DATA
+    # SAVE MODEL
 
-        predictable_data = trainer.get_predictible_data(
-            df,
-            columns_to_remove=["<DATE>", "<TICKER>", "<PER>", "<TIME>", "<OPENINT>"],
-            columns_from_past_periods=["<OPEN>", "<HIGH>", "<LOW>", "<CLOSE>"],
-        )
+    with open(f"{models_dir}/{stock_code}.svr", "wb") as file:
+        pickle.dump(svr, file)
 
-        # TRAIN MODEL
+    end = time.time()
+    if (timed):
+        print(f"training time for {stock_code}: {end-start}s")
 
-        svr = trainer.get_stock_predictor(
-            stock,
-            predictable_data,
-            prediction_columns=["<CLOSE>", "<HIGH>", "<LOW>"],
-            verbose=True,
-        )
-
-        with open(f"{models_dir}/{stock}.svr", "wb") as file:
-            pickle.dump(svr, file)
-
-        end = time.time()
-
-        print(f"time for {stock}: {end - start}")
-        total_time += end - start
-
-    print(f"total time {total_time}")
-    # with open('saved/pkp.svr', 'rb') as file:
-    #     test = pickle.load(file)
+    return True
 
 
 def is_model_trained(stock_symbol: str) -> bool:
-    pass
+    stock_code = stock_symbol.lower()
+
+    if not isdir(models_dir):
+        mkdir(models_dir)
+
+    return f"{stock_code}.svr" in listdir(models_dir)
 
 
 def has_training_data(stock_symbol: str) -> bool:

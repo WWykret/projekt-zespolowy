@@ -26,7 +26,6 @@ def get_predictible_data(
 
 
 def get_stock_predictor(
-    stock: str,
     data: pd.DataFrame,
     prediction_columns: List[str],
     verbose: bool = False,
