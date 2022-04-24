@@ -9,53 +9,83 @@ import time
 # CONSTS
 
 days_back = 30
+models_dir = "trained"
+data_dir = "training_data"
+min_useful_size = 1500
 
-if (not isdir('trained')):
-    mkdir('trained')
 
-# all_svrs = list(filter(lambda x: x[-4:] == '.svr', listdir('trained')))
-all_svrs = [file for file in listdir('trained') if file[-4:] == '.svr']
+def func():
+    if not isdir(models_dir):
+        mkdir(models_dir)
 
-total_time = 0
-for stock in ['11b', 'ale', 'cdr', 'pkn', 'pkp', 'xtb']:
+    # all_svrs = list(filter(lambda x: x[-4:] == '.svr', listdir(models_dir)))
+    all_svrs = [file for file in listdir(models_dir) if file[-4:] == ".svr"]
 
-    print(f'working on {stock}...')
-    # CHECK IF STOCK ALREADY HAS SVR
+    total_time = 0
+    for stock in ["11b", "ale", "cdr", "pkn", "pkp", "xtb"]:
 
-    if f'{stock}.svr' in all_svrs:
-        continue
+        print(f"working on {stock}...")
+        # CHECK IF STOCK ALREADY HAS SVR
 
-    start = time.time()
+        if f"{stock}.svr" in all_svrs:
+            continue
 
-    # LOAD RAW DATA
+        start = time.time()
 
-    df = pd.read_csv(f'training_data/{stock}.csv', sep=',')
+        # LOAD RAW DATA
 
-    # MODIFY DATA
+        df = pd.read_csv(f"{data_dir}/{stock}.csv", sep=",")
 
-    predictable_data = trainer.get_predictible_data(
-        df,
-        columns_to_remove=["<DATE>", "<TICKER>", "<PER>", "<TIME>", "<OPENINT>"],
-        columns_from_past_periods=["<OPEN>", "<HIGH>", "<LOW>", "<CLOSE>"],
-    )
+        # MODIFY DATA
 
-    # TRAIN MODEL
+        predictable_data = trainer.get_predictible_data(
+            df,
+            columns_to_remove=["<DATE>", "<TICKER>", "<PER>", "<TIME>", "<OPENINT>"],
+            columns_from_past_periods=["<OPEN>", "<HIGH>", "<LOW>", "<CLOSE>"],
+        )
 
-    svr = trainer.get_stock_predictor(
-        stock,
-        predictable_data,
-        prediction_columns=['<CLOSE>','<HIGH>','<LOW>'],
-        verbose=True,
-    )
+        # TRAIN MODEL
 
-    with open(f'trained/{stock}.svr', 'wb') as file:
-        pickle.dump(svr, file)
+        svr = trainer.get_stock_predictor(
+            stock,
+            predictable_data,
+            prediction_columns=["<CLOSE>", "<HIGH>", "<LOW>"],
+            verbose=True,
+        )
 
-    end = time.time()
+        with open(f"{models_dir}/{stock}.svr", "wb") as file:
+            pickle.dump(svr, file)
 
-    print(f'time for {stock}: {end - start}')
-    total_time += end - start
+        end = time.time()
 
-print(f'total time {total_time}')
+        print(f"time for {stock}: {end - start}")
+        total_time += end - start
+
+    print(f"total time {total_time}")
     # with open('saved/pkp.svr', 'rb') as file:
     #     test = pickle.load(file)
+
+
+def has_enough_training_data(stock_symbol: str) -> bool:
+    stock_code = stock_symbol.lower()
+
+    if not isdir(data_dir):
+        mkdir(data_dir)
+
+    is_in_dir = f'{stock_code}.csv' in listdir(data_dir)
+
+    if is_in_dir:
+        data_file = pd.read_csv(f'{data_dir}/{stock_code}.csv')
+        return data_file.shape[0] >= min_useful_size
+
+    return False
+
+def save_training_data(stock_symbol: str, data: pd.DataFrame) -> None:
+    stock_code = stock_symbol.lower()
+
+    if not isdir(data_dir):
+        mkdir(data_dir)
+
+    data.to_csv(f'{data_dir}/{stock_code}.csv', index=False)
+
+    
