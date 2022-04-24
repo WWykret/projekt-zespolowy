@@ -66,19 +66,18 @@ def func():
     #     test = pickle.load(file)
 
 
-def has_enough_training_data(stock_symbol: str) -> bool:
+def is_model_trained(stock_symbol: str) -> bool:
+    pass
+
+
+def has_training_data(stock_symbol: str) -> bool:
     stock_code = stock_symbol.lower()
 
     if not isdir(data_dir):
         mkdir(data_dir)
 
-    is_in_dir = f'{stock_code}.csv' in listdir(data_dir)
+    return f"{stock_code}.csv" in listdir(data_dir)
 
-    if is_in_dir:
-        data_file = pd.read_csv(f'{data_dir}/{stock_code}.csv')
-        return data_file.shape[0] >= min_useful_size
-
-    return False
 
 def save_training_data(stock_symbol: str, data: pd.DataFrame) -> None:
     stock_code = stock_symbol.lower()
@@ -86,6 +85,4 @@ def save_training_data(stock_symbol: str, data: pd.DataFrame) -> None:
     if not isdir(data_dir):
         mkdir(data_dir)
 
-    data.to_csv(f'{data_dir}/{stock_code}.csv', index=False)
-
-    
+    data.to_csv(f"{data_dir}/{stock_code}.csv", index=False)
