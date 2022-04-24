@@ -1,0 +1,12 @@
+PRS: profile
+IMG: obrazek
+CMP: firmy
+TCP: śledzone firmy
+
+ADD (TCP PRS)
+
+REM (TCP PRS)
+
+GET
+
+

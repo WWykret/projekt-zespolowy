@@ -1,0 +1,140 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Data\Images\Assets" />
+      <Folder Include="Data\Images\Avatars" />
+      <Folder Include="Font" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Data\Images\Avatars\Akszyli.png" />
+      <Content Include="Data\Images\Avatars\Akszyli.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Bakalar.png" />
+      <Content Include="Data\Images\Avatars\Bakalar.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Nfd.png" />
+      <Content Include="Data\Images\Avatars\Nfd.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Wojak.png" />
+      <Content Include="Data\Images\Avatars\Wojak.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Chicken.png" />
+      <Content Include="Data\Images\Avatars\Chicken.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Dog.png" />
+      <Content Include="Data\Images\Avatars\Dog.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Funi.png" />
+      <Content Include="Data\Images\Avatars\Funi.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\GenericAvatar.png" />
+      <Content Include="Data\Images\Avatars\GenericAvatar.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\GigaAvatar.png" />
+      <Content Include="Data\Images\Avatars\GigaAvatar.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\GigaDawid.png" />
+      <Content Include="Data\Images\Avatars\GigaDawid.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Jonathan.png" />
+      <Content Include="Data\Images\Avatars\Jonathan.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Nfd2.png" />
+      <Content Include="Data\Images\Avatars\Nfd2.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Nft.jpg" />
+      <Content Include="Data\Images\Avatars\Nft.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\NFTW.png" />
+      <Content Include="Data\Images\Avatars\NFTW.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Sop0.jpg" />
+      <Content Include="Data\Images\Avatars\Sop0.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Sop2Lore.png" />
+      <Content Include="Data\Images\Avatars\Sop2Lore.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Sopowicz2.png" />
+      <Content Include="Data\Images\Avatars\Sopowicz2.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Viju.png" />
+      <Content Include="Data\Images\Avatars\Viju.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Witam.png" />
+      <Content Include="Data\Images\Avatars\Witam.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\WojakZadowolony.png" />
+      <Content Include="Data\Images\Avatars\WojakZadowolony.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Wut.png" />
+      <Content Include="Data\Images\Avatars\Wut.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\PanSaulutki.png" />
+      <Content Include="Data\Images\Avatars\PanSaulutki.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\PanHankutki.png" />
+      <Content Include="Data\Images\Avatars\PanHankutki.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\PanBialutki.png" />
+      <Content Include="Data\Images\Avatars\PanBialutki.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Jeremiasz.png" />
+      <Content Include="Data\Images\Avatars\Jeremiasz.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Gustavo.png" />
+      <Content Include="Data\Images\Avatars\Gustavo.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\Majk.png" />
+      <Content Include="Data\Images\Avatars\Majk.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Assets\MainBackground.png" />
+      <Content Include="Data\Images\Assets\MainBackground.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Assets\Icon.png" />
+      <Content Include="Data\Images\Assets\Icon.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.2" />
+      <PackageReference Include="RabbitMQ.Client" Version="6.2.4" />
+    </ItemGroup>
+
+</Project>

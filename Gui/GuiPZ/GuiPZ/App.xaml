@@ -1,0 +1,55 @@
+﻿<Application x:Class="GuiPZ.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GuiPZ"
+             xmlns:viewModel="clr-namespace:GuiPZ.MVVM.ViewModel"
+             xmlns:view="clr-namespace:GuiPZ.MVVM.View"
+             xmlns:login="clr-namespace:GuiPZ.MVVM.View.Login"
+             xmlns:main="clr-namespace:GuiPZ.MVVM.View.Main"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        
+        <ResourceDictionary>
+            
+            <ResourceDictionary.MergedDictionaries>
+                 <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/ScrollbarTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/ProfileListTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/WindowButtonTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/AvatarListTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/TextBoxRegistrationTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/BasicButtonTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/ProfileWithDeleteListTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/ProfileButtonTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+             
+             <DataTemplate DataType="{x:Type viewModel:Main.HomeViewModel}">
+                 <main:HomeView/>
+             </DataTemplate>
+             
+             <DataTemplate DataType="{x:Type viewModel:Login.LoginViewModel}">
+                 <login:LoginView/>
+             </DataTemplate>
+             
+             <DataTemplate DataType="{x:Type viewModel:Main.UserStockViewModel}">
+                 <main:UserStockView/>
+             </DataTemplate>
+             
+             <DataTemplate DataType="{x:Type viewModel:Main.ManageStockViewModel}">
+                 <main:ManageStockView/>
+             </DataTemplate>
+             
+             <DataTemplate DataType="{x:Type viewModel:Main.PredictionsViewModel}">
+                 <main:PredictionsView/>
+             </DataTemplate>
+             
+             <DataTemplate DataType="{x:Type viewModel:Login.ProfilesViewModel}">
+                 <login:ProfilesView/>
+             </DataTemplate>
+             
+             <DataTemplate DataType="{x:Type viewModel:Login.RegistrationViewModel}">
+                 <login:RegistrationView/>
+             </DataTemplate>
+         </ResourceDictionary>
+    </Application.Resources>
+</Application>
