@@ -46,7 +46,7 @@
                 
                 <Button Style="{StaticResource WindowButton}"
                         Content="✕"
-                        Click="Button_CloseApp"/>
+                        Command="{Binding CloseWindowCommand, Mode=OneWay}"/>
                 
             </StackPanel>
             

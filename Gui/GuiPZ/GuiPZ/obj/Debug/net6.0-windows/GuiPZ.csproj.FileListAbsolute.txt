@@ -113,3 +113,6 @@ C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-wind
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Assets\Icon.png
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\ProfileWithDeleteListTheme.baml
 C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\ProfileButtonTheme.baml
+C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\RabbitMQ.Client.dll
+C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\GuiPZ.csproj.CopyComplete
+C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Microsoft.Toolkit.Mvvm.dll

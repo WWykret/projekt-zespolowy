@@ -23,7 +23,7 @@ public class AddProfileCommand<T> : CommandBase where T : ViewModelBase
     
     public override void Execute(object? parameter)
     {
-        DataContainer.AddProfile(_dataSource.CurrentProfile);
+        _dataSource._dataContainer.AddProfile(_dataSource.CurrentProfile);
         
         _contextNavigation.CurrentViewModel = _createViewModel();
     }

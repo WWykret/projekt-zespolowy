@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "NRCXEiKZxDfTqhgRwxMeekeVbnqr17kxiAN4bucOH5wQJDUEH31Bm0W2nIzTlmlj+vnzL9uhOBbJJe6Y4cvKHw==",
+  "dgSpecHash": "UWgG1SyBpY4MxH9NreGbfRMI+RV85xsm6VVc4v5pZ10egNhn2JOblfpeSfH2lBMYhnme+KVrLfZpp6uJhhleAA==",
   "success": true,
   "projectFilePath": "C:\\Users\\FPro\\Desktop\\PZ\\projekt-zespolowy\\Gui\\GuiPZ\\GuiPZ\\GuiPZ.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\FPro\\.nuget\\packages\\microsoft.toolkit.mvvm\\7.1.2\\microsoft.toolkit.mvvm.7.1.2.nupkg.sha512",
+    "C:\\Users\\FPro\\.nuget\\packages\\rabbitmq.client\\6.2.4\\rabbitmq.client.6.2.4.nupkg.sha512",
+    "C:\\Users\\FPro\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\FPro\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
+  ],
   "logs": []
 }

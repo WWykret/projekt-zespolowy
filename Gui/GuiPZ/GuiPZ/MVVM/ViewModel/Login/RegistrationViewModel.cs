@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using GuiPZ.Command;
+using GuiPZ.Communicator.Client;
 using GuiPZ.Container;
 using GuiPZ.MVVM.Model;
 using GuiPZ.Navigation;
@@ -13,11 +14,13 @@ namespace GuiPZ.MVVM.ViewModel.Login;
 
 public class RegistrationViewModel : ViewModelBase
 {
+    public DataContainer _dataContainer;
+    private DataExchanger _dataExchanger;
     public ICommand ProfilesViewCommand { get; }
 
     public ICommand AddProfileCommand { get; }
 
-    public List<Avatar> Avatars => DataContainer.Avatars;
+    public List<Avatar> Avatars => _dataContainer.Avatars;
 
     private Avatar _selectedAvatar;
     
@@ -37,12 +40,15 @@ public class RegistrationViewModel : ViewModelBase
         }
     }
 
-    public RegistrationViewModel(ContextNavigation mainNav, ContextNavigation loginNav)
+    public RegistrationViewModel(ContextNavigation mainNav, ContextNavigation loginNav, DataContainer dataContainer, DataExchanger dataExchanger)
     {
-        ProfilesViewCommand = new NavCommand<ProfilesViewModel>(loginNav, () => new ProfilesViewModel(mainNav, loginNav));
+        _dataContainer = dataContainer;
+        _dataExchanger = dataExchanger;
+
+        ProfilesViewCommand = new NavCommand<ProfilesViewModel>(loginNav, () => new ProfilesViewModel(mainNav, loginNav, _dataContainer, _dataExchanger));
 
         AddProfileCommand =
-            new AddProfileCommand<ProfilesViewModel>(loginNav, () => new ProfilesViewModel(mainNav, loginNav), this);
+            new AddProfileCommand<ProfilesViewModel>(loginNav, () => new ProfilesViewModel(mainNav, loginNav, _dataContainer, _dataExchanger), this);
         
         
         CurrentProfile = new Profile()

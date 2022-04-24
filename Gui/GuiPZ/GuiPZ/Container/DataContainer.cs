@@ -9,32 +9,21 @@ namespace GuiPZ.Container;
 
 public class DataContainer
 {
-    public static ObservableCollection<Profile> Profiles { get; set; }
+    public ObservableCollection<Profile> Profiles { get; set; }
     
-    public static List<Avatar> Avatars { get; set; }
+    public List<Avatar> Avatars { get; set; }
 
-    public static void InitializeContainers()
+    public DataContainer()
     {
-        Profiles = new()
-        {
-            new Profile()
-            {
-                Name = "Joe",
-                Img = new Uri("pack://application:,,,/GuiPz;component/Data/Images/Avatars/Nfd.png")
-            },
-            new Profile()
-            {
-                Name = "Joel",
-                Img = new Uri("pack://application:,,,/GuiPZ;component/Data/Images/Avatars/Bakalar.png")
-            }
-        };
-
+        Profiles = new();
         Avatars = Directory.GetFiles("./Data/Images/Avatars")
             .Select(x => new Avatar() { Img = new Uri(string.Concat("pack://application:,,,/GuiPZ;component", x.AsSpan(1))) })
             .ToList();
     }
 
-    public static void AddProfile(Profile profile)
+    
+
+    public void AddProfile(Profile profile)
     {
         Profiles.Add(profile);
     }
