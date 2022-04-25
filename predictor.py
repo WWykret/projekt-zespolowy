@@ -5,16 +5,7 @@ from stock_svr import stockSVR
 from os import listdir, mkdir, remove
 from os.path import isdir, isfile
 import time
-
-# CONSTS
-
-days_back = 30
-models_dir = "trained"
-data_dir = "training_data"
-min_useful_size = 1500
-not_important_columns = ["Data"]
-repeated_columns = ["Otwarcie", "Najwyzszy", "Najnizszy", "Zamkniecie"]#, "Wolumen"]
-prediction_columns = ["Zamkniecie", "Najwyzszy", "Najnizszy"]
+from consts import days_back, models_dir, data_dir, min_useful_size, not_important_columns, repeated_columns, prediction_columns
 
 def train_model(stock_symbol: str, timed: bool=False, verbose: bool=False) -> bool:
     start = time.time()
