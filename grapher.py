@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from utils import get_date_from_str
 from datetime import date, timedelta
+import numpy as np
 from consts import draw_data_column, draw_time_column
 
 def limit_to_days_ago(xs, ys, days):
@@ -36,8 +37,10 @@ def draw_graph(xs, ys, type=None):
 
     ax.plot(new_xs, new_ys, "b-")
 
-    plt.show()
-
+    # RETURN GRAPH AS IMG
+    fig.canvas.draw()
+    data = np.frombuffer(fig.canvas.tostring_rgb(), dtype=np.uint8)
+    
 
 if __name__ == "__main__":
     df = pd.read_csv("training_data/11b.csv")
