@@ -2,7 +2,7 @@ import pandas as pd
 import trainer
 import pickle
 from stock_svr import stockSVR
-from os import listdir, mkdir, remove
+from os import listdir, makedirs, remove
 from os.path import isdir, isfile
 import time
 from consts import days_back, models_dir, data_dir, min_useful_size, not_important_columns, repeated_columns, prediction_columns
@@ -18,7 +18,7 @@ def train_model(stock_symbol: str, timed: bool=False, verbose: bool=False) -> bo
     print(f"Trainig {stock_code}...")
 
     if not isdir(models_dir):
-        mkdir(models_dir)
+        makedirs(models_dir)
 
     # REMOVE OLD SVR IF EXISTS
 
@@ -59,7 +59,7 @@ def is_model_trained(stock_symbol: str) -> bool:
     stock_code = stock_symbol.lower()
 
     if not isdir(models_dir):
-        mkdir(models_dir)
+        makedirs(models_dir)
 
     return f"{stock_code}.svr" in listdir(models_dir)
 
@@ -68,15 +68,24 @@ def has_training_data(stock_symbol: str) -> bool:
     stock_code = stock_symbol.lower()
 
     if not isdir(data_dir):
-        mkdir(data_dir)
+        makedirs(data_dir)
 
     return f"{stock_code}.csv" in listdir(data_dir)
+
+
+def get_training_data(stock_symbol: str) -> pd.DataFrame:
+    stock_code = stock_symbol.lower()
+
+    if not has_training_data(stock_symbol):
+        return
+    
+    return pd.read_csv(f"{data_dir}/{stock_code}.csv")
 
 
 def save_training_data(stock_symbol: str, data: pd.DataFrame) -> None:
     stock_code = stock_symbol.lower()
 
     if not isdir(data_dir):
-        mkdir(data_dir)
+        makedirs(data_dir)
 
     data.to_csv(f"{data_dir}/{stock_code}.csv", index=False)
