@@ -147,7 +147,12 @@ def add_predicted_row_to_data(svr: stockSVR, original: pd.DataFrame) -> pd.DataF
     prediction = pd.DataFrame(svr.predict(next_row_input))
     next_row_input = next_row_input.reset_index(drop=True)
     new_last_row = next_row_input.join(prediction)
-    new_last_row[date_col] = get_date_from_str(original[date_col].iloc[-1]) + datetime.timedelta(days=1)
+
+    next_date = get_date_from_str(original[date_col].iloc[-1]) + datetime.timedelta(days=1)
+    while next_date.isoweekday() in [6,7]:
+        next_date += datetime.timedelta(days=1)
+    new_last_row[date_col] = next_date
+
     new_data = pd.concat([original, new_last_row]).reset_index(drop=True)
     new_data = new_data.dropna(axis=1)
     # print(new_last_row)
