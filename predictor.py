@@ -155,12 +155,26 @@ def add_predicted_row_to_data(svr: stockSVR, original: pd.DataFrame) -> pd.DataF
 
     new_data = pd.concat([original, new_last_row]).reset_index(drop=True)
     new_data = new_data.dropna(axis=1)
-    # print(new_last_row)
-    print(new_data.tail(3))
+    return new_data
+
+def get_predicted_rows_from_stock(stock_symbol: str, pred_days: int, include_original: bool) -> pd.DataFrame:
+    stock_code = stock_symbol.lower()
+
+    if not has_training_data(stock_code) or not is_model_trained(stock_code):
+        return
+
+    svr = load_model(stock_symbol)
+    original_data = get_training_data(stock_symbol)
+
+    for i in range(pred_days):
+        original_data = add_predicted_row_to_data(svr, original_data)
+    
+    if include_original:
+        return original_data
+    
+    return original_data.tail(pred_days)
 
 if __name__ == '__main__':
-    data = get_training_data('11b')
-    svr = load_model('11b')
-    # print(data.tail(3))
-    data = add_predicted_row_to_data(svr, data)
-    # print(data.tail(3))
+    print(get_training_data('11b').tail(10))
+    print(get_predicted_rows_from_stock('11b', 7, True).tail(10))
+    print(get_predicted_rows_from_stock('11b', 7, False).tail(10))

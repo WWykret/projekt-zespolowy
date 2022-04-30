@@ -23,4 +23,7 @@ def set_last_scan_date(date: date) -> None:
 
 
 def get_date_from_str(date_str: str) -> date:
+    if isinstance(date_str, date):
+        return date_str
+        
     return datetime.strptime(date_str, "%Y-%m-%d").date()
