@@ -54,7 +54,7 @@ def train_model(stock_symbol: str, timed: bool = False, verbose: bool = False) -
 
     predictable_data = turn_data_predictible(df)
 
-    print(predictable_data)
+    # print(predictable_data)
 
     # TRAIN MODEL
 
