@@ -3,6 +3,8 @@ import pandas as pd
 from sklearn.svm import LinearSVR
 from sklearn.preprocessing import scale
 from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
 from stock_svr import stockSVR
 
 
@@ -47,8 +49,8 @@ def get_stock_predictor(
         # TRAIN AND TEST
 
         svr = LinearSVR(
-            C=best_parameters[col]["C"],
-            epsilon=best_parameters[col]["epsilon"],
+            C=best_parameters[col]["svr__C"],
+            epsilon=best_parameters[col]["svr__epsilon"],
             dual=False,
             loss="squared_epsilon_insensitive",
         )
@@ -64,16 +66,18 @@ def get_stock_predictor(
 def find_best_parameters(
     X_train: pd.DataFrame, y_train: pd.DataFrame, scoring: str
 ) -> Dict[str, float]:
-    tuned_parameters = [
+    pipe = Pipeline([('scaler', StandardScaler()), ('svr', LinearSVR(dual=False, loss="squared_epsilon_insensitive"))])
+
+    grid_params = [
         {
-            "epsilon": [10**i for i in range(-7,8)],
-            "C": [10**i for i in range(-7,8)],
+            "svr__epsilon": [10**i for i in range(-7,8)],
+            "svr__C": [10**i for i in range(-7,8)],
         }
     ]
 
     clf = GridSearchCV(
-        LinearSVR(dual=False, loss="squared_epsilon_insensitive"),
-        tuned_parameters,
+        pipe,
+        grid_params,
         scoring=scoring,
     )
     clf.fit(X_train, y_train)
