@@ -93,9 +93,17 @@ public class ReplyHandler
     private void HandleImage(String message)
     {
         string company_name = message.Substring(0, message.IndexOf(':'));
-        List<Int32> company_img = JsonSerializer.Deserialize<List<Int32>>(message.Substring(message.IndexOf(':') + 1));
+        string message_rest = message.Substring(message.IndexOf(':') + 1);
+
+        string company_immage_string = message_rest.Substring(0, message.IndexOf(':'));
+        string company_prediction_string = message_rest.Substring(message.IndexOf(':') + 1);
+        
+        List<List<Int32>>  company_img = JsonSerializer.Deserialize<List<List<Int32>>>(company_immage_string);
+        float  company_pred = JsonSerializer.Deserialize<float>(company_prediction_string);
+        
         var com = _dataContainer.Companies.First(x => x.Name.Equals(company_name));
         com.Img = company_img;
+        com.Prediction = company_pred;
     }
 
     // private void HandleTrackedcompany(String message)

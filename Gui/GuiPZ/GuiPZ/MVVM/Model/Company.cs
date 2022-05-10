@@ -11,6 +11,7 @@ public class Company
         this.Code = Code;
         this.Link = new Uri(Link);
         this.Img = null;
+        this.Prediction = 0;
     }
 
     public Company(string Name, string Code, Uri Link)
@@ -19,6 +20,7 @@ public class Company
         this.Code = Code;
         this.Link = Link;
         this.Img = null;
+        this.Prediction = 0;
     }
 
     public Company()
@@ -27,10 +29,13 @@ public class Company
         Code = "";
         Link = null;
         Img = null;
+        this.Prediction = 0;
     }
 
     public string Name { get; set; }
     public string Code { get; set; }
     public Uri Link { get; set; }
-    public List<Int32> Img { get; set; }
+    public List<List<Int32>> Img { get; set; }
+    
+    public float Prediction { get; set; }
 }

@@ -15,7 +15,7 @@ GET:CMP  -> SND:CMP:<Tablica Danych JSON>
 -pobrani listy wszsystkich profili(zrobione)
 GET:PRS  -> SND:PRS:<Tablica Danych JSON>
 -wysłanie zdięcia o danej spółce
-GET:IMG:(kod spólki)  -> SND:IMG:<Nazwa spólki>:<Link do obrakza>
+GET:IMG:(kod spólki)  -> SND:IMG:<Nazwa spólki>:<Link do obrakza>:<float z przewidywaniem>
 // -lista wszystkich spólek śledzonych przez danego użytkownika
 // GET:TCP:(kod użytkownika)  -> SND:TCP:<Dane>
 
