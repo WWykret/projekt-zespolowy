@@ -1,7 +1,8 @@
-from typing import Dict, List
-from sklearn.svm import LinearSVR
-from sklearn.metrics import max_error, explained_variance_score, r2_score
+from typing import List
+
 import pandas as pd
+from sklearn.metrics import max_error, explained_variance_score, r2_score
+from sklearn.svm import LinearSVR
 
 
 class stockSVR:

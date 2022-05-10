@@ -9,4 +9,26 @@ REM (TCP PRS)
 
 GET
 
+c#->python  ->  python->c# :
+-wysłanie listy wszystkch spółek
+GET:CMP  -> SND:CMP:<Tablica Danych JSON>
+-pobrani listy wszsystkich profili(zrobione)
+GET:PRS  -> SND:PRS:<Tablica Danych JSON>
+-wysłanie zdięcia o danej spółce
+GET:IMG:(kod spólki)  -> SND:IMG:<Nazwa spólki>:<Link do obrakza>
+// -lista wszystkich spólek śledzonych przez danego użytkownika
+// GET:TCP:(kod użytkownika)  -> SND:TCP:<Dane>
+
+c#->python  ->  python->c# :
+-utworzenie profilu
+SND:NUS:<Dane JSON>  -> -
+-usinięcie profilu
+SND:DUS:<Nazwa Profilu>  -> -
+-dodanie śledzonej spółki do profilu
+SND:NCM:<Nazwa Profilu>:<Nazwa Spółki>  -> -
+-usnięcie śledzonej spółki z profilu
+SND:DCM:<Nazwa Profilu>:<Nazwa Spółki>  -> -
+
+
+GET IMG 11B
 
