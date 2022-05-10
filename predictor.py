@@ -1,10 +1,11 @@
-import pandas as pd
-import trainer
 import pickle
-from stock_svr import stockSVR
+import time
 from os import listdir, mkdir
 from os.path import isdir
-import time
+
+import pandas as pd
+
+import trainer
 
 # CONSTS
 
@@ -44,7 +45,7 @@ for stock in ['11b', 'ale', 'cdr', 'pkn', 'pkp', 'xtb']:
     svr = trainer.get_stock_predictor(
         stock,
         predictable_data,
-        prediction_columns=['<CLOSE>','<HIGH>','<LOW>'],
+        prediction_columns=['<CLOSE>', '<HIGH>', '<LOW>'],
         verbose=True,
     )
 
@@ -57,5 +58,5 @@ for stock in ['11b', 'ale', 'cdr', 'pkn', 'pkp', 'xtb']:
     total_time += end - start
 
 print(f'total time {total_time}')
-    # with open('saved/pkp.svr', 'rb') as file:
-    #     test = pickle.load(file)
+# with open('saved/pkp.svr', 'rb') as file:
+#     test = pickle.load(file)

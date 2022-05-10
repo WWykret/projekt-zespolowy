@@ -6,6 +6,8 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 
 
+# from webdriver_manager.firefox import GeckoDriverManager
+
 def dataScraper(name):
     return pd.read_csv(f"https://stooq.pl/q/d/l/?s={name}&i=d")
 
@@ -13,6 +15,8 @@ def dataScraper(name):
 def namesScraper():
     os.environ['MOZ_HEADLESS'] = '1'
     driver = webdriver.Firefox(executable_path='./webDrivers/geckodriver')
+    # driver = webdriver.Firefox(executable_path = GeckoDriverManager().install())
+
     driver.implicitly_wait(3)
     pageNotEmpty = True
     data = {}
@@ -53,12 +57,11 @@ def namesScraper():
             i += 1
 
     driver.close()
-    data["Symbol"] = data_symbol
     data["Name"] = data_name
+    data["Code"] = data_symbol
     data["Link"] = data_link
     df = pd.DataFrame(data)
     return df
-
 
 # print(namesScraper())
 # print(dataScraper('11B'))
