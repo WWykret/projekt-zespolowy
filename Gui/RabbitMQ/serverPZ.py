@@ -56,7 +56,7 @@ def saveProfilesData():
 
 def constructCompany(data):
     row = data.iloc[0]
-    out = Company(row['Name'], row['Code'], row['Link'], None)
+    out = Company(row['Name'], row['Code'], row['Link'], row['Img'], row['Prediction'])
     return out
 
 
@@ -69,6 +69,11 @@ def constructProfile(data):
 # TODO DLA KSIĘDZA
 def get_image(company_name):
     return [[1, 2, 3, 4, 5, 6]]
+
+
+# TODO DLA KSIĘDZA
+def get_prediction(company_name):
+    return 0.3
 
 
 def handler(message, ch, properties):
@@ -111,7 +116,9 @@ def image_sender(rest, ch, properties):
     company_found = dataContainer.companies.loc[dataContainer.companies['Name'] == company_name]
     if len(company_found) > 0:
         company_img = get_image(company_name)
-        ch.basic_publish('', routing_key=properties.reply_to, body=code + company_name + ":" + json.dumps(company_img))
+        company_ped = get_prediction(company_name)
+        ch.basic_publish('', routing_key=properties.reply_to,
+                         body=code + company_name + ":" + json.dumps(company_img) + ":" + json.dumps(company_ped))
 
 
 def send_handler(message):
@@ -133,11 +140,13 @@ def new_user_created(raw):
     dataContainer.profiles = dataContainer.profiles.append(
         {"Name": profile_data.Name, "Img": profile_data.Img, "TrackedCompanies": profile_data.TrackedCompanies},
         ignore_index=True)
+    saveProfilesData()
 
 
 def user_deleted(raw):
     profile_name = raw
     dataContainer.profiles = dataContainer.profiles.loc[dataContainer.profiles["Name"] != profile_name]
+    saveProfilesData()
 
 
 def tracked_company_added(raw):
@@ -155,6 +164,7 @@ def tracked_company_added(raw):
             tracked_companies = dataContainer.profiles.loc[profile_index, 'TrackedCompanies']
             tracked_companies.append(company_name)
             dataContainer.profiles.loc[profile_index, 'TrackedCompanies'] = tracked_companies
+    saveProfilesData()
 
 
 def tracked_company_removed(raw):
@@ -172,6 +182,7 @@ def tracked_company_removed(raw):
             tracked_companies = dataContainer.profiles.loc[profile_index, 'TrackedCompanies']
             tracked_companies.remove(company_name)
             dataContainer.profiles.loc[profile_index, 'TrackedCompanies'] = tracked_companies
+    saveProfilesData()
 
 
 def profile_class_to_row(profile):
@@ -179,7 +190,8 @@ def profile_class_to_row(profile):
 
 
 def company_class_to_row(company):
-    return {"Name": company.Name, "Code": company.Code, "Link": company.Link, "Img": company.Img}
+    return {"Name": company.Name, "Code": company.Code, "Link": company.Link, "Img": company.Img,
+            "Prediction": company.Prediction}
 
 
 def profile_row_to_class(profile):
@@ -187,7 +199,7 @@ def profile_row_to_class(profile):
 
 
 def company_row_to_class(company):
-    return Company(company.Name, company.Code, company.Link, company.Img)
+    return Company(company.Name, company.Code, company.Link, company.Img, company.Prediction)
 
 
 def on_request_message_received(ch, method, properties, body: bytes):
@@ -199,19 +211,17 @@ def on_request_message_received(ch, method, properties, body: bytes):
 
 
 def server():
-    # C1 = Company("Amazon1", "AMZ1", "https://stooq.pl/q/?s=11b", None)
-    # C2 = Company("Amazon2", "AMZ2", "https://stooq.pl/q/?s=ale", None)
-    # dataContainer.scraped_Companies = dataContainer.scraped_Companies.append(company_class_to_row(C1),
-    #                                                                         ignore_index=True)
-    # dataContainer.scraped_Companies = dataContainer.scraped_Companies.append(company_class_to_row(C2),
-    #                                                                          ignore_index=True)
-    #
-    # P1 = Profile("Adam", "dupny link", [])
-    # P2 = Profile("Adam2", "dupny link2", ["Amazon1", "Amazon2"])
-    # dataContainer.profiles_df = dataContainer.profiles_df.append(profile_class_to_row(P1), ignore_index=True)
-    # dataContainer.profiles_df = dataContainer.profiles_df.append(profile_class_to_row(P2), ignore_index=True)
+    C1 = Company("Amazon1", "AMZ1", "https://stooq.pl/q/?s=11b", None, 0)
+    C2 = Company("Amazon2", "AMZ2", "https://stooq.pl/q/?s=ale", None, 0)
+    dataContainer.companies = dataContainer.companies.append(company_class_to_row(C1), ignore_index=True)
+    dataContainer.companies = dataContainer.companies.append(company_class_to_row(C2), ignore_index=True)
 
-    initializeData()
+    P1 = Profile("Adam", "dupny link", [])
+    P2 = Profile("Adam2", "dupny link2", ["Amazon1", "Amazon2"])
+    dataContainer.profiles = dataContainer.profiles.append(profile_class_to_row(P1), ignore_index=True)
+    dataContainer.profiles = dataContainer.profiles.append(profile_class_to_row(P2), ignore_index=True)
+
+    # initializeData()
 
     connection_parameters = pika.ConnectionParameters('localhost')
 
