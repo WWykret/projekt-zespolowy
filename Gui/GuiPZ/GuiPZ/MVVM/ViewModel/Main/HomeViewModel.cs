@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System.Collections.ObjectModel;
+using System.Windows.Input;
 using GuiPZ.Command;
 using GuiPZ.Communicator.Client;
 using GuiPZ.Container;
@@ -14,11 +15,14 @@ public class HomeViewModel : ViewModelBase
     private DataExchanger _dataExchanger;
     public ICommand NavMainCommand { get; }
 
-    private Profile Profile { get; set; }
+    private Profile Profile => _dataContainer.CurrentProfile;
     public HomeViewModel(ContextNavigation mainNav, Profile profile, DataContainer dataContainer, DataExchanger dataExchanger)
     {
         _dataContainer = dataContainer;
         _dataExchanger = dataExchanger;
+        
+        _dataContainer.SetCompaniesToAdd(profile);
+        _dataContainer.SetTrackedCompanies(profile);
         
         NavMainCommand = new NavCommand<LoginViewModel>(mainNav, () => new LoginViewModel(mainNav, _dataContainer, _dataExchanger));
         
@@ -30,7 +34,7 @@ public class HomeViewModel : ViewModelBase
         UserViewCommand = new NavCommand<UserStockViewModel>(_stockNav, () => new UserStockViewModel(_dataContainer, _dataExchanger));
         ManageViewCommand = new NavCommand<ManageStockViewModel>(_stockNav, () => new ManageStockViewModel(_dataContainer, _dataExchanger));
 
-        Profile = profile;
+        _dataContainer.CurrentProfile = profile;
     }
 
     public ICommand PredictionsViewCommand { get; }

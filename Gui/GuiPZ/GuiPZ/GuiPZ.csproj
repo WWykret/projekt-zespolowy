@@ -130,6 +130,10 @@
       <Content Include="Data\Images\Assets\Icon.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
+      <None Remove="Data\Images\Assets\Placeholder.png" />
+      <Content Include="Data\Images\Assets\Placeholder.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
     <ItemGroup>

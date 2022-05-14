@@ -195,3 +195,8 @@ C:\Users\wojte\Mój dysk\Studia\Semestr 6\Projekt Zespołowy\projekt-zespolowy\G
 C:\Users\wojte\Mój dysk\Studia\Semestr 6\Projekt Zespołowy\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\ref\GuiPZ.dll
 C:\Users\wojte\Mój dysk\Studia\Semestr 6\Projekt Zespołowy\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\GuiPZ.pdb
 C:\Users\wojte\Mój dysk\Studia\Semestr 6\Projekt Zespołowy\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\GuiPZ.genruntimeconfig.cache
+C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Assets\Placeholder.png
+C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\CompaniesToAddTheme.baml
+C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\TrackedCompaniesRemTheme.baml
+C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\TrackedCompaniesTempTheme.baml
+C:\Users\FPro\Desktop\PZ\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\TrackedCompaniesTheme.baml

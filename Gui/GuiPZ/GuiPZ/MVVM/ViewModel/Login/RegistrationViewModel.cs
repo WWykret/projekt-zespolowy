@@ -16,6 +16,8 @@ public class RegistrationViewModel : ViewModelBase
 {
     public DataContainer _dataContainer;
     private DataExchanger _dataExchanger;
+    
+    public void AddProfile(Profile profile) => _dataExchanger.CreateNewProfile(profile);
     public ICommand ProfilesViewCommand { get; }
 
     public ICommand AddProfileCommand { get; }
