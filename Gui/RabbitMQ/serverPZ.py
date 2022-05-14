@@ -70,7 +70,7 @@ def constructProfile(data):
 
 # GRAPHS
 def get_image(company_name):
-    companies = dataContainer.companies()
+    companies = dataContainer.companies
     company_code = companies.loc[companies['Name'] == company_name]['Code'].iloc[0]
 
     if not has_training_data(company_code):
@@ -89,7 +89,7 @@ def get_image(company_name):
 
 # PREDICTIONS
 def get_prediction(company_name):
-    companies = dataContainer.companies()
+    companies = dataContainer.companies
     company_code = companies.loc[companies['Name'] == company_name]['Code'].iloc[0]
 
     prediction = get_predicted_rows_from_stock(company_code, 1, False)

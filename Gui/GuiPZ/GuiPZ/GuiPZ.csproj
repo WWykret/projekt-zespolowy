@@ -134,6 +134,10 @@
       <Content Include="Data\Images\Assets\Placeholder.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
+      <None Remove="Data\Images\Avatars\FeaturingDanteFromDMC.png" />
+      <Content Include="Data\Images\Avatars\FeaturingDanteFromDMC.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
     <ItemGroup>

@@ -107,10 +107,12 @@ public class ReplyHandler
         var  companyPred = JsonSerializer.Deserialize<float>(companyPredictionString);
         
         var com = _dataContainer.Companies.First(x => x.Name.Equals(companyName));
-
         com.Img = companyImg;
-
         com.Prediction = companyPred;
+        
+        var com2 = _dataContainer.TrackedCompanies.First(x => x.Name.Equals(companyName));
+        com2.Img = companyImg;
+        com2.Prediction = companyPred;
     }
     
     

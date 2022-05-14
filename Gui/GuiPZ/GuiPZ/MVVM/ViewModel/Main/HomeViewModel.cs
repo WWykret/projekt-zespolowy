@@ -23,6 +23,14 @@ public class HomeViewModel : ViewModelBase
         
         _dataContainer.SetCompaniesToAdd(profile);
         _dataContainer.SetTrackedCompanies(profile);
+
+        foreach (var company in _dataContainer.TrackedCompanies)
+        {
+            if (company.Img == null)
+            {
+                _dataExchanger.GetImage(company);
+            }
+        }
         
         NavMainCommand = new NavCommand<LoginViewModel>(mainNav, () => new LoginViewModel(mainNav, _dataContainer, _dataExchanger));
         
