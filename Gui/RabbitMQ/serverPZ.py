@@ -10,8 +10,8 @@ from company import Company
 from dataSource import namesScraper
 from profile import Profile
 
-from ...grapher import get_grahp_for_stock_with_code
-from ...predictor import get_predicted_rows_from_stock
+from grapher import get_grahp_for_stock_with_code
+from predictor import get_predicted_rows_from_stock
 
 
 def get_companies():
@@ -213,7 +213,7 @@ def profile_row_to_class(profile):
 
 
 def company_row_to_class(company):
-    return Company(company.Name, company.Code, company.Link, company.Img, company.Prediction)
+    return Company(company.Name, company.Code, company.Link, None, 0)
 
 
 def on_request_message_received(ch, method, properties, body: bytes):
@@ -225,17 +225,17 @@ def on_request_message_received(ch, method, properties, body: bytes):
 
 
 def server():
-    C1 = Company("Amazon1", "AMZ1", "https://stooq.pl/q/?s=11b", None, 0)
-    C2 = Company("Amazon2", "AMZ2", "https://stooq.pl/q/?s=ale", None, 0)
-    dataContainer.companies = dataContainer.companies.append(company_class_to_row(C1), ignore_index=True)
-    dataContainer.companies = dataContainer.companies.append(company_class_to_row(C2), ignore_index=True)
+    # C1 = Company("Amazon1", "AMZ1", "https://stooq.pl/q/?s=11b", None, 0)
+    # C2 = Company("Amazon2", "AMZ2", "https://stooq.pl/q/?s=ale", None, 0)
+    # dataContainer.companies = dataContainer.companies.append(company_class_to_row(C1), ignore_index=True)
+    # dataContainer.companies = dataContainer.companies.append(company_class_to_row(C2), ignore_index=True)
+    #
+    # P1 = Profile("Adam", "dupny link", [])
+    # P2 = Profile("Adam2", "dupny link2", ["Amazon1", "Amazon2"])
+    # dataContainer.profiles = dataContainer.profiles.append(profile_class_to_row(P1), ignore_index=True)
+    # dataContainer.profiles = dataContainer.profiles.append(profile_class_to_row(P2), ignore_index=True)
 
-    P1 = Profile("Adam", "dupny link", [])
-    P2 = Profile("Adam2", "dupny link2", ["Amazon1", "Amazon2"])
-    dataContainer.profiles = dataContainer.profiles.append(profile_class_to_row(P1), ignore_index=True)
-    dataContainer.profiles = dataContainer.profiles.append(profile_class_to_row(P2), ignore_index=True)
-
-    # initializeData()
+    initializeData()
 
     connection_parameters = pika.ConnectionParameters('localhost')
 
