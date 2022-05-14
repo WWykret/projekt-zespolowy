@@ -135,4 +135,6 @@ dmypy.json
 .vscode
 
 # Project
-trained
+*.dta
+*.svr
+*.csv
