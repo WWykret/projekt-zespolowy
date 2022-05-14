@@ -11,7 +11,7 @@ from dataSource import namesScraper
 from profile import Profile
 
 from grapher import get_grahp_for_stock_with_code
-from predictor import get_predicted_rows_from_stock
+from predictor import get_predicted_rows_from_stock, has_training_data, save_training_data, download_training_data, is_model_trained, train_model
 
 
 def get_companies():
@@ -56,7 +56,6 @@ def saveProfilesData():
 
     to_save.to_csv(path)
 
-
 def constructCompany(data):
     row = data.iloc[0]
     out = Company(row['Name'], row['Code'], row['Link'], row['Img'], row['Prediction'])
@@ -73,6 +72,13 @@ def constructProfile(data):
 def get_image(company_name):
     companies = dataContainer.companies()
     company_code = companies.loc[companies['Name'] == company_name]['Code'].iloc[0]
+
+    if not has_training_data(company_code):
+        download_training_data(company_code)
+
+    # TODO
+    if not is_model_trained(company_code):
+        train_model(company_code, timed=False, verbose=False)
 
     out = []
     for date_limit in ["all-time", "month", "year", "predicted"]:
