@@ -44,17 +44,12 @@ def get_stock_predictor(
         )
         ys_test[col] = y_test
         # FIND BEST PARAMETERS
-        best_parameters[col] = find_best_parameters(X_train, y_train, "r2")
+        grid_search = find_best_parameters(X_train, y_train, "r2")
+        best_parameters[col] = grid_search.best_params_
 
         # TRAIN AND TEST
 
-        svr = LinearSVR(
-            C=best_parameters[col]["svr__C"],
-            epsilon=best_parameters[col]["svr__epsilon"],
-            dual=False,
-            loss="squared_epsilon_insensitive",
-        )
-        svr.fit(X_train, y_train)
+        svr = grid_search.best_estimator_
         final_svr.add_column_predictor(col, svr)
 
     if verbose:
@@ -82,7 +77,7 @@ def find_best_parameters(
     )
     clf.fit(X_train, y_train)
 
-    return clf.best_params_
+    return clf
 
 
 def create_columns_from_pref_dates(
