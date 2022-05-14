@@ -24,10 +24,14 @@ def namesScraper():
     data_symbol = []
     data_link = []
     i = 1
+
+
     while pageNotEmpty:
         print(f"reading page nr {i}")
         URL = f"https://stooq.pl/t/?i=513&v=0&l={i}"
         driver.get(URL)
+
+
 
         # time.sleep(3)
         if i == 1:
@@ -36,7 +40,13 @@ def namesScraper():
             driver.refresh()
             # time.sleep(3)
 
+
         html = driver.page_source
+
+
+        print(html)
+
+
         soup = BeautifulSoup(html, "html.parser")
         table = soup.find("table", attrs={"id": "fth1"})
         table_data = table.tbody.find_all("tr")

@@ -128,10 +128,11 @@ def save_training_data(stock_symbol: str, data: pd.DataFrame) -> None:
 
 def download_training_data(stock_symbol: str):
     try:
-        return dataScraper(stock_symbol)
-    except TimeoutError(e):
+        data = dataScraper(stock_symbol)
+        save_training_data(stock_symbol.lower(), data)
+    except TimeoutError:
         time.sleep(5)
-        return download_training_data(stock_symbol)
+        download_training_data(stock_symbol)
 
 
 def generate_next_row_input(prev_row: pd.DataFrame) -> pd.DataFrame:

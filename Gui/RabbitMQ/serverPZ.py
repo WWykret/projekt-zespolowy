@@ -1,4 +1,5 @@
 import json
+import pickle
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -38,11 +39,13 @@ def initializeCompanies():
 
 
 def initializeProfiles():
-    path_to_file = 'profiles_data.csv'
+    path_to_file = 'profiles.data'
     path = Path(path_to_file)
 
     if path.is_file():
-        dataContainer.profiles = pd.read_csv(path, index_col=0)
+        with open(path_to_file, 'rb') as file:
+            dataContainer.profiles = pickle.load(file)
+            print(dataContainer.profiles)
     else:
         data = {"Name": [], "Img": [], "TrackedCompanies": []}
         dataContainer.profiles = pd.DataFrame(data)
@@ -50,11 +53,10 @@ def initializeProfiles():
 
 
 def saveProfilesData():
-    path_to_file = 'profiles_data.csv'
+    path_to_file = 'profiles.data'
     path = Path(path_to_file)
-    to_save = dataContainer.profiles
-
-    to_save.to_csv(path)
+    with open(path_to_file, 'wb') as file:
+        pickle.dump(dataContainer.profiles, file)
 
 def constructCompany(data):
     row = data.iloc[0]
@@ -70,6 +72,7 @@ def constructProfile(data):
 
 # GRAPHS
 def get_image(company_name):
+    print("LOL")
     companies = dataContainer.companies
     company_code = companies.loc[companies['Name'] == company_name]['Code'].iloc[0]
 
@@ -83,16 +86,19 @@ def get_image(company_name):
     out = []
     for date_limit in ["all-time", "month", "year", "predicted"]:
         out.append(get_grahp_for_stock_with_code(company_code, date_limit))
-    
+
+    print("xDD")
     return out
 
 
 # PREDICTIONS
 def get_prediction(company_name):
+    print("FUK")
     companies = dataContainer.companies
     company_code = companies.loc[companies['Name'] == company_name]['Code'].iloc[0]
 
     prediction = get_predicted_rows_from_stock(company_code, 1, False)
+
     return prediction["Zamkniecie"].iloc[0]
 
 
