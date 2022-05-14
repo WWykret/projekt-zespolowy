@@ -7,6 +7,8 @@ from os.path import isdir, isfile
 import time
 import datetime
 from utils import get_date_from_str
+import time
+from dataSource import dataScraper
 from consts import (
     days_back,
     models_dir,
@@ -122,6 +124,14 @@ def save_training_data(stock_symbol: str, data: pd.DataFrame) -> None:
         makedirs(data_dir)
 
     data.to_csv(f"{data_dir}/{stock_code}.csv", index=False)
+
+
+def download_training_data(stock_symbol: str):
+    try:
+        return dataScraper(stock_symbol)
+    except TimeoutError(e):
+        time.sleep(5)
+        return download_training_data(stock_symbol)
 
 
 def generate_next_row_input(prev_row: pd.DataFrame) -> pd.DataFrame:
