@@ -10,6 +10,9 @@ from company import Company
 from dataSource import namesScraper
 from profile import Profile
 
+from ...grapher import get_grahp_for_stock_with_code
+from ...predictor import get_predicted_rows_from_stock
+
 
 def get_companies():
     out = []
@@ -66,14 +69,25 @@ def constructProfile(data):
     return out
 
 
-# TODO DLA KSIĘDZA
+# GRAPHS
 def get_image(company_name):
-    return [[1, 2, 3, 4, 5, 6]]
+    companies = dataContainer.companies()
+    company_code = companies.loc[companies['Name'] == company_name]['Code'].iloc[0]
+
+    out = []
+    for date_limit in ["all-time", "month", "year", "predicted"]:
+        out.append(get_grahp_for_stock_with_code(company_code, date_limit))
+    
+    return out
 
 
-# TODO DLA KSIĘDZA
+# PREDICTIONS
 def get_prediction(company_name):
-    return 0.3
+    companies = dataContainer.companies()
+    company_code = companies.loc[companies['Name'] == company_name]['Code'].iloc[0]
+
+    prediction = get_predicted_rows_from_stock(company_code, 1, False)
+    return prediction["Zamkniecie"].iloc[0]
 
 
 def handler(message, ch, properties):
