@@ -12,19 +12,43 @@ public class DataContainer
     public ObservableCollection<Profile> Profiles { get; set; }
     public ObservableCollection<Company> Companies { get; set; }
     public List<Avatar> Avatars { get; set; }
+    
+    public Profile CurrentProfile { get; set; }
+
+    public ObservableCollection<Company> CompaniesToAdd { get; set; }
+    
+    public ObservableCollection<Company> TrackedCompanies { get; set; }
 
     public DataContainer()
     {
         Profiles = new();
         Companies = new();
-        Avatars = Directory.GetFiles("./Data/Images/Avatars")
-            .Select(x => new Avatar()
-                {Img = new Uri(string.Concat("pack://application:,,,/GuiPZ;component", x.AsSpan(1)))})
-            .ToList();
+        Avatars = new();
     }
 
-    public void AddProfile(Profile profile)
+    public void SetCompaniesToAdd(Profile profile)
     {
-        Profiles.Add(profile);
+        CompaniesToAdd = new();
+        
+        foreach (var company in Companies)
+        {
+            if (!profile.TrackedCompanies.Contains(company.Name))
+            {
+                CompaniesToAdd.Add(company);
+            }
+        }
+    }
+
+    public void SetTrackedCompanies(Profile profile)
+    {
+        TrackedCompanies = new();
+        
+        foreach (var company in Companies)
+        {
+            if (profile.TrackedCompanies.Contains(company.Name))
+            {
+                TrackedCompanies.Add(company);
+            }
+        }
     }
 }

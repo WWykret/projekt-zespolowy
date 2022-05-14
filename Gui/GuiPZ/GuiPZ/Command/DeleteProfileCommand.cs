@@ -27,16 +27,13 @@ public class DeleteProfileCommand : CommandBase
         {
             if (_viewModel.SelectedProfile == item)
             {
-                _viewModel.Profiles.Remove(item);
+                _viewModel.DeleteProfile(item);
                 _viewModel.SelectedProfile = _viewModel.Profiles.First();
             }
             else
             {
-                _viewModel.Profiles.Remove(item);
+                _viewModel.DeleteProfile(item);
             }
-            
-            
-
             
         }
             

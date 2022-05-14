@@ -62,5 +62,6 @@ public class ProfilesViewModel : ViewModelBase
         if (Profiles.Count > 0)
             SelectedProfile = Profiles.First();
     }
-    
+
+    public void DeleteProfile(Profile profile) => _dataExchanger.DeleteProfile(profile);
 }

@@ -7,7 +7,12 @@
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <Button Width="200" Height="200"
-                Background="CornflowerBlue"></Button>
+        <ListView ItemsSource="{Binding TrackedCompanies}"
+                  ItemContainerStyle="{StaticResource TrackedCompaniesTempTheme}"
+                  Background="Red"
+                  BorderThickness="0" Height="200"
+                  HorizontalAlignment="Center"
+                  Margin="10">
+        </ListView>
     </Grid>
 </UserControl>

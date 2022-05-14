@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Reflection.Metadata;
 using System.Text.Json;
+using System.Windows.Controls;
 using GuiPZ.Container;
 using GuiPZ.MVVM.Model;
+using System.Drawing;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace GuiPZ.Communicator.Client;
 
@@ -39,7 +43,7 @@ public class ReplyHandler
         }
         else if (code.Equals("CMP"))
         {
-            Handlecompany(rest);
+            HandleCompany(rest);
         }
         else if (code.Equals("IMG"))
         {
@@ -80,9 +84,10 @@ public class ReplyHandler
         }
     }
 
-    private void Handlecompany(String message)
+    private void HandleCompany(String message)
     {
         List<Company> companies = JsonSerializer.Deserialize<List<Company>>(message);
+
         _dataContainer.Companies.Clear();
         for (int i = 0; i < companies.Count; i++)
         {
@@ -92,19 +97,24 @@ public class ReplyHandler
 
     private void HandleImage(String message)
     {
-        string company_name = message.Substring(0, message.IndexOf(':'));
-        string message_rest = message.Substring(message.IndexOf(':') + 1);
+        var companyName = message.Substring(0, message.IndexOf(':'));
+        var messageRest = message.Substring(message.IndexOf(':') + 1);
 
-        string company_immage_string = message_rest.Substring(0, message.IndexOf(':'));
-        string company_prediction_string = message_rest.Substring(message.IndexOf(':') + 1);
+        var companyImageString = messageRest.Substring(0, message.IndexOf(':'));
+        var companyPredictionString = messageRest.Substring(message.IndexOf(':') + 1);
         
-        List<List<Int32>>  company_img = JsonSerializer.Deserialize<List<List<Int32>>>(company_immage_string);
-        float  company_pred = JsonSerializer.Deserialize<float>(company_prediction_string);
+        var  companyImg = JsonSerializer.Deserialize<List<List<byte>>>(companyImageString);
+        var  companyPred = JsonSerializer.Deserialize<float>(companyPredictionString);
         
-        var com = _dataContainer.Companies.First(x => x.Name.Equals(company_name));
-        com.Img = company_img;
-        com.Prediction = company_pred;
+        var com = _dataContainer.Companies.First(x => x.Name.Equals(companyName));
+
+        com.Img = companyImg;
+
+        com.Prediction = companyPred;
     }
+    
+    
+    
 
     // private void HandleTrackedcompany(String message)
     // {

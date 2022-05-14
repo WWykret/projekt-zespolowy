@@ -7,7 +7,25 @@
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <Button Width="200" Height="200"
-                Background="GreenYellow"></Button>
+        <StackPanel Orientation="Horizontal" Margin="200" HorizontalAlignment="Center">
+            
+            <ListView ItemsSource="{Binding CompaniesToAdd}"
+                      ItemContainerStyle="{StaticResource CompaniesToAddTheme}"
+                      Background="Gray"
+                      BorderThickness="0" Height="200"
+                      HorizontalAlignment="Center"
+                      Margin="10">
+            </ListView>
+            
+            <ListView ItemsSource="{Binding TrackedCompanies}"
+                      ItemContainerStyle="{StaticResource TrackedCompaniesRemTheme}"
+                      Background="Red"
+                      BorderThickness="0" Height="200"
+                      HorizontalAlignment="Center"
+                      Margin="10">
+            </ListView>
+        </StackPanel>
+        
+        
     </Grid>
 </UserControl>
