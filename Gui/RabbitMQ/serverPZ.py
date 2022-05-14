@@ -1,4 +1,5 @@
 import json
+import pickle
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -35,11 +36,13 @@ def initializeCompanies():
 
 
 def initializeProfiles():
-    path_to_file = 'profiles_data.csv'
+    path_to_file = 'profiles.data'
     path = Path(path_to_file)
 
     if path.is_file():
-        dataContainer.profiles = pd.read_csv(path, index_col=0)
+        with open(path_to_file,'rb') as file:
+            dataContainer.profiles = pickle.load(file)
+            print(dataContainer.profiles)
     else:
         data = {"Name": [], "Img": [], "TrackedCompanies": []}
         dataContainer.profiles = pd.DataFrame(data)
@@ -47,11 +50,10 @@ def initializeProfiles():
 
 
 def saveProfilesData():
-    path_to_file = 'profiles_data.csv'
+    path_to_file = 'profiles.data'
     path = Path(path_to_file)
-    to_save = dataContainer.profiles
-
-    to_save.to_csv(path)
+    with open(path_to_file, 'wb') as file:
+        pickle.dump(dataContainer.profiles,file)
 
 
 def constructCompany(data):
@@ -199,7 +201,7 @@ def profile_row_to_class(profile):
 
 
 def company_row_to_class(company):
-    return Company(company.Name, company.Code, company.Link, company.Img, company.Prediction)
+    return Company(company.Name, company.Code, company.Link, None, 0)
 
 
 def on_request_message_received(ch, method, properties, body: bytes):
@@ -211,18 +213,18 @@ def on_request_message_received(ch, method, properties, body: bytes):
 
 
 def server():
-    C1 = Company("Amazon1", "AMZ1", "https://stooq.pl/q/?s=11b", None, 0)
-    C2 = Company("Amazon2", "AMZ2", "https://stooq.pl/q/?s=ale", None, 0)
-    dataContainer.companies = dataContainer.companies.append(company_class_to_row(C1), ignore_index=True)
-    dataContainer.companies = dataContainer.companies.append(company_class_to_row(C2), ignore_index=True)
+    # C1 = Company("Amazon1", "AMZ1", "https://stooq.pl/q/?s=11b", None, 0)
+    # C2 = Company("Amazon2", "AMZ2", "https://stooq.pl/q/?s=ale", None, 0)
+    # dataContainer.companies = dataContainer.companies.append(company_class_to_row(C1), ignore_index=True)
+    # dataContainer.companies = dataContainer.companies.append(company_class_to_row(C2), ignore_index=True)
+    #
+    # P1 = Profile("Adam", "dupny link", [])
+    # P2 = Profile("Adam2", "dupny link2", ["Amazon1", "Amazon2"])
+    # dataContainer.profiles = dataContainer.profiles.append(profile_class_to_row(P1), ignore_index=True)
+    # dataContainer.profiles = dataContainer.profiles.append(profile_class_to_row(P2), ignore_index=True)
 
-    P1 = Profile("Adam", "dupny link", [])
-    P2 = Profile("Adam2", "dupny link2", ["Amazon1", "Amazon2"])
-    dataContainer.profiles = dataContainer.profiles.append(profile_class_to_row(P1), ignore_index=True)
-    dataContainer.profiles = dataContainer.profiles.append(profile_class_to_row(P2), ignore_index=True)
-
-    # initializeData()
-
+    initializeData()
+    # saveProfilesData()
     connection_parameters = pika.ConnectionParameters('localhost')
 
     connection = pika.BlockingConnection(connection_parameters)
