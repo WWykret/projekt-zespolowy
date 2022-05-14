@@ -16,9 +16,9 @@ public class UserStockViewModel : ViewModelBase
     
     public ObservableCollection<Company> TrackedCompanies => _dataContainer.TrackedCompanies;
     
-    private Company _selectedCompany;
+    private Company? _selectedCompany;
 
-    public Company SelectedCompany
+    public Company? SelectedCompany
     {
         get => _selectedCompany;
         set
@@ -29,34 +29,53 @@ public class UserStockViewModel : ViewModelBase
     }
     
     public BitmapImage Plot { get; set; }
-    
+
+    private int _plotIndex;
+
+    public int PlotIndex
+    {
+        get => _plotIndex;
+        set
+        {
+            _plotIndex = value;
+            RefreshPlot();
+        }
+    }
+
     public UserStockViewModel(DataContainer dataContainer, DataExchanger dataExchanger)
     {
         _dataContainer = dataContainer;
         _dataExchanger = dataExchanger;
 
+        _dataExchanger.DataLoaded += RefreshPlot;
+
+        _plotIndex = 0;
+
         if (TrackedCompanies.Count > 0)
         {
             SelectedCompany = TrackedCompanies[0];
             
-            Plot = new BitmapImage(
-                new Uri("pack://application:,,,/GuiPz;component/Data/Images/Assets/Placeholder.png"));
-            
             if (SelectedCompany.Img != null && SelectedCompany.Img[0] != null)
             {
-                var temp = new List<BitmapImage>();
-                for (int i = 0; i < 4; i++)
-                {
-                    temp.Add(new BitmapImage(new Uri("pack://application:,,,/GuiPz;component/Data/Images/Assets/Placeholder.png")));
-                }
-
-                //SelectedCompany.Img = temp;
-
-                
+                Plot = ToImage(SelectedCompany.Img[PlotIndex].ToArray());
+            }
+            else
+            {
+                Plot = new BitmapImage(
+                    new Uri("pack://application:,,,/GuiPz;component/Data/Images/Assets/Placeholder.png"));
             }
                 
         }
         
+    }
+
+    private void RefreshPlot()
+    {
+        if (SelectedCompany != null && SelectedCompany.Img != null)
+        {
+            Plot = ToImage(SelectedCompany.Img[PlotIndex].ToArray());
+            OnPropertyChanged(nameof(Plot));
+        }
     }
     
     private BitmapImage ToImage(byte[] array)

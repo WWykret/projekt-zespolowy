@@ -43,10 +43,6 @@ def namesScraper():
 
         html = driver.page_source
 
-
-        print(html)
-
-
         soup = BeautifulSoup(html, "html.parser")
         table = soup.find("table", attrs={"id": "fth1"})
         table_data = table.tbody.find_all("tr")

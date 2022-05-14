@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UWgG1SyBpY4MxH9NreGbfRMI+RV85xsm6VVc4v5pZ10egNhn2JOblfpeSfH2lBMYhnme+KVrLfZpp6uJhhleAA==",
+  "dgSpecHash": "bhhm3THl0Y72Ba/9MHtRZ2WNypthBgei6Z3TcruDfHYPFu27F4u64JoMN5O4lIj01FLf3umHY/HTnYE0YiR5kg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\FPro\\Desktop\\PZ\\projekt-zespolowy\\Gui\\GuiPZ\\GuiPZ\\GuiPZ.csproj",
+  "projectFilePath": "C:\\Users\\FPro\\Desktop\\PZ2.0\\projekt-zespolowy\\Gui\\GuiPZ\\GuiPZ\\GuiPZ.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\FPro\\.nuget\\packages\\microsoft.toolkit.mvvm\\7.1.2\\microsoft.toolkit.mvvm.7.1.2.nupkg.sha512",
     "C:\\Users\\FPro\\.nuget\\packages\\rabbitmq.client\\6.2.4\\rabbitmq.client.6.2.4.nupkg.sha512",
