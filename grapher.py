@@ -78,7 +78,7 @@ def draw_graph(
 
     # RETURN GRAPH AS IMG
     fig.canvas.draw()
-    data = np.frombuffer(fig.canvas.tostring_rgb(), dtype=np.uint8)
+    data = np.frombuffer(fig.canvas.tostring_rgb(), dtype=np.uint8).tolist()
     # print(len(data))
     # plt.show()
     return data
