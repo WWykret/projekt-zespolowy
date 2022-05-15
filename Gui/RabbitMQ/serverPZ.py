@@ -14,6 +14,7 @@ from profile import Profile
 from grapher import get_grahp_for_stock_with_code
 from predictor import get_predicted_rows_from_stock, has_training_data, save_training_data, download_training_data, is_model_trained, train_model
 
+company_list_as_csv = 'companies.csv'
 
 def get_companies():
     out = []
@@ -35,8 +36,9 @@ def initializeData():
 
 
 def initializeCompanies():
-    dataContainer.companies = namesScraper()
-
+    
+    all_companies = namesScraper()
+    dataContainer.companies = all_companies
 
 def initializeProfiles():
     path_to_file = 'profiles.data'
