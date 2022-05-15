@@ -7,12 +7,56 @@
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <ListView ItemsSource="{Binding TrackedCompanies}"
-                  ItemContainerStyle="{StaticResource TrackedCompaniesTempTheme}"
-                  Background="Red"
-                  BorderThickness="0" Height="200"
-                  HorizontalAlignment="Center"
-                  Margin="10">
-        </ListView>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <ListView ItemsSource="{Binding VeryBad}"
+                          ItemContainerStyle="{StaticResource TrackedCompaniesTempTheme}"
+                          Background="Red"
+                          BorderThickness="0" Height="200"
+                          HorizontalAlignment="Center"
+                          Margin="10">
+                </ListView>
+                
+                <ListView ItemsSource="{Binding Bad}"
+                          ItemContainerStyle="{StaticResource TrackedCompaniesTempTheme}"
+                          Background="Red"
+                          BorderThickness="0" Height="200"
+                          HorizontalAlignment="Center"
+                          Margin="10">
+                </ListView>
+                
+                <ListView ItemsSource="{Binding Neutral}"
+                          ItemContainerStyle="{StaticResource TrackedCompaniesTempTheme}"
+                          Background="Red"
+                          BorderThickness="0" Height="200"
+                          HorizontalAlignment="Center"
+                          Margin="10">
+                </ListView>
+                
+                <ListView ItemsSource="{Binding Good}"
+                          ItemContainerStyle="{StaticResource TrackedCompaniesTempTheme}"
+                          Background="Red"
+                          BorderThickness="0" Height="200"
+                          HorizontalAlignment="Center"
+                          Margin="10">
+                </ListView>
+                
+                <ListView ItemsSource="{Binding VeryGood}"
+                          ItemContainerStyle="{StaticResource TrackedCompaniesTempTheme}"
+                          Background="Red"
+                          BorderThickness="0" Height="200"
+                          HorizontalAlignment="Center"
+                          Margin="10">
+                </ListView>
+            </StackPanel>
+            
+            <ListView ItemsSource="{Binding Unloaded}"
+                      ItemContainerStyle="{StaticResource TrackedCompaniesTempTheme}"
+                      Background="Red"
+                      BorderThickness="0" Height="200"
+                      HorizontalAlignment="Center"
+                      Margin="10">
+            </ListView>
+        </StackPanel>
     </Grid>
 </UserControl>

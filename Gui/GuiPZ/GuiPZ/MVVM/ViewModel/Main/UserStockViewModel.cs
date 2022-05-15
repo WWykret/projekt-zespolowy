@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Interop;
@@ -80,7 +81,8 @@ public class UserStockViewModel : ViewModelBase
         }
         
     }
-
+    
+    [MethodImpl(MethodImplOptions.Synchronized)]
     private void RefreshPlot()
     {
         if (SelectedCompany != null && SelectedCompany.Img != null && SelectedCompany.Img[0] != null)
@@ -90,8 +92,10 @@ public class UserStockViewModel : ViewModelBase
         }
         else
         {
-            Plot = new BitmapImage(
+            var plot = new BitmapImage(
                 new Uri("pack://application:,,,/GuiPz;component/Data/Images/Assets/Placeholder.png"));
+            plot.Freeze();
+            Plot = plot;
             OnPropertyChanged(nameof(Plot));
         }
     }
@@ -117,7 +121,7 @@ public class UserStockViewModel : ViewModelBase
                 pic.SetPixel(x, y, c);
             }
         }
-        
+
         using (var memory = new MemoryStream())
         {
             pic.Save(memory, ImageFormat.Png);

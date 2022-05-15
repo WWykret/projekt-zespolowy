@@ -16,5 +16,5 @@ C:\Users\FPro\Desktop\PZ2.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\App.xaml
 1972048187523
 MainWindow.xaml;MVVM\View\Login\LoginView.xaml;MVVM\View\Login\ProfilesView.xaml;MVVM\View\Login\RegistrationView.xaml;MVVM\View\Main\HomeView.xaml;MVVM\View\Main\ManageStockView.xaml;MVVM\View\Main\PredictionsView.xaml;MVVM\View\Main\UserStockView.xaml;Theme\AvatarListTheme.xaml;Theme\BasicButtonTheme.xaml;Theme\CompaniesToAddTheme.xaml;Theme\MenuButtonTheme.xaml;Theme\ProfileButtonTheme.xaml;Theme\ProfileListTheme.xaml;Theme\ProfileWithDeleteListTheme.xaml;Theme\ScrollbarTheme.xaml;Theme\TextBoxRegistrationTheme.xaml;Theme\TrackedCompaniesRemTheme.xaml;Theme\TrackedCompaniesTempTheme.xaml;Theme\TrackedCompaniesTheme.xaml;Theme\WindowButtonTheme.xaml;
 
-True
+False
 
