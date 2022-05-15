@@ -6,7 +6,7 @@ from os import listdir, makedirs, remove
 from os.path import isdir, isfile
 import time
 import datetime
-from utils import get_date_from_str
+from utils import get_date_from_str, update_last_scan_date_for_stock, is_stock_data_up_to_date
 import time
 from dataSource import dataScraper
 from consts import (
@@ -127,9 +127,13 @@ def save_training_data(stock_symbol: str, data: pd.DataFrame) -> None:
 
 
 def download_training_data(stock_symbol: str):
+    if has_training_data(stock_symbol) and is_stock_data_up_to_date(stock_symbol):
+        return
+
     try:
         data = dataScraper(stock_symbol)
         save_training_data(stock_symbol.lower(), data)
+        update_last_scan_date_for_stock(stock_symbol)
     except TimeoutError:
         time.sleep(5)
         download_training_data(stock_symbol)
