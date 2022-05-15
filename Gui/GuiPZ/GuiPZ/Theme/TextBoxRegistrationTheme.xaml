@@ -16,7 +16,7 @@
                                      Background="Transparent"
                                      VerticalContentAlignment="Center"
                                      Padding="5"
-                                     Foreground="#CFCFCF"
+                                     Foreground="{Binding TextColour}"
                                      x:Name="SearchBox"></TextBox>
                         </Grid>
                         

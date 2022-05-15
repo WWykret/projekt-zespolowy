@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using GuiPZ.Container;
 using GuiPZ.MVVM.ViewModel;
 using GuiPZ.MVVM.ViewModel.Login;
@@ -23,8 +24,11 @@ public class AddProfileCommand<T> : CommandBase where T : ViewModelBase
     
     public override void Execute(object? parameter)
     {
-        _dataSource.AddProfile(_dataSource.CurrentProfile);
+        if (!_dataSource._dataContainer.Profiles.Select(p => p.Name).Contains(_dataSource.ProfileName))
+        {
+            _dataSource.AddProfile(_dataSource.CurrentProfile);
         
-        _contextNavigation.CurrentViewModel = _createViewModel();
+            _contextNavigation.CurrentViewModel = _createViewModel();
+        }
     }
 }

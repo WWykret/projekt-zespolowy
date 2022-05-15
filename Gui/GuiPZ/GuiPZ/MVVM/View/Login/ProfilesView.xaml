@@ -18,7 +18,7 @@
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center">
                 <Button.Content>
-                    <Border Height="80" Width="300"
+                    <Border Height="80" Width="320"
                             CornerRadius="4"
                             Margin="2"
                             DataContext="{Binding SelectedProfile}">
@@ -31,7 +31,8 @@
                             <Border Width="70" Height="70"
                                     CornerRadius="10"
                                     HorizontalAlignment="Center"
-                                    Grid.Column="0">
+                                    Grid.Column="0"
+                                    Margin="5">
                                 <Border.Background>
                                     <ImageBrush Stretch="Fill" ImageSource="{Binding Img}"/>
                                 </Border.Background>
@@ -50,9 +51,6 @@
                             
                         </Grid>
                     </Border>
-                    <!-- <ListViewItem DataContext="{Binding SelectedProfile}" -->
-                    <!--               Style="{StaticResource ProfileListTheme}" -->
-                    <!--               Panel.ZIndex="0"/> -->
                 </Button.Content>
             </Button>
             

@@ -18,6 +18,7 @@ def get_predictible_data(
         columns_to_remove = []
 
     data.drop(columns_to_remove, axis=1, inplace=True)
+    data = data.dropna()
 
     if columns_from_past_periods:
         data = create_columns_from_pref_dates(

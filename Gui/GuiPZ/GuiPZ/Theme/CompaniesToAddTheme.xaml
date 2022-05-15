@@ -2,43 +2,34 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style TargetType="ListViewItem"
            x:Key="CompaniesToAddTheme">
-        <Style.Triggers>
-            <Trigger Property="IsSelected" Value="True">
-                <Setter Property="Background" Value="#6535C5"/>
-            </Trigger>
-        </Style.Triggers>
         
-        <Setter Property="Background" Value="#252525"/>
+        <Setter Property="Background" Value="Bisque"/>
         <Setter Property="BorderThickness" Value="0"/>
         
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ListViewItem">
                     <Border Background="{TemplateBinding Background}"
-                            Height="60" Width="240"
+                            Height="80" Width="420"
                             CornerRadius="4"
                             Margin="2">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="60"/>
                                 <ColumnDefinition/>
+                                <ColumnDefinition Width="80"/>
                             </Grid.ColumnDefinitions>
                             
-                            <Label Content="{Binding Name}"/>
+                            <Label Content="{Binding Name}"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Height="50"
+                                   Width="300"
+                                   HorizontalContentAlignment="Center"
+                                   FontSize="25"
+                                   FontWeight="Bold"/>
                             
-                            
-                            <!-- <Border Grid.Column="1" -->
-                            <!--         BorderThickness="5" -->
-                            <!--         BorderBrush="Transparent" -->
-                            <!--         Background="DarkGray"> -->
-                            <!--     <Label Content="{Binding Name}" -->
-                            <!--            VerticalAlignment="Center" -->
-                            <!--            HorizontalAlignment="Center" -->
-                            <!--            FontWeight="Bold"/> -->
-                            <!-- </Border> -->
-                            
-                            <Button Width="50" Height="15"
-                                    Content="Add"
+                            <Button Width="50" Height="20"
+                                    Content=" add"
                                     Grid.Column="1"
                                     HorizontalAlignment="Right"
                                     VerticalAlignment="Top"
@@ -48,10 +39,11 @@
                             
                                 <Button.Style>
                                     <Style TargetType="{x:Type Button}">
-                                        <Setter Property="Background" Value="DarkRed"/>
+                                        <Setter Property="Background" Value="Chartreuse"/>
                                         <Setter Property="BorderThickness" Value="0"/>
-                                        <Setter Property="Foreground" Value="DarkGray"/>
+                                        <Setter Property="Foreground" Value="DarkGreen"/>
                                         <Setter Property="FontWeight" Value="Bold"/>
+                                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
                             
                                         <Setter Property="Template">
                                             <Setter.Value>

@@ -83,9 +83,23 @@ public class RegistrationViewModel : ViewModelBase
                 Name = value,
                 Img = CurrentProfile.Img
             };
+            OnPropertyChanged(nameof(TextColour));
         }
     }
-    
+
+    public string TextColour
+    {
+        get
+        {
+            if (_dataContainer.Profiles.Select(p => p.Name).Contains(_profileName))
+            {
+                return "Red";
+            }
+
+            return "White";
+        }
+    }
+
     private Profile _currentProfile;
 
     public Profile CurrentProfile

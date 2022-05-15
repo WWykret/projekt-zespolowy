@@ -5,26 +5,46 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:GuiPZ.MVVM.View.Main"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="620" d:DesignWidth="1200">
     <Grid>
-        <StackPanel Orientation="Horizontal" Margin="200" HorizontalAlignment="Center">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
             
             <ListView ItemsSource="{Binding CompaniesToAdd}"
                       ItemContainerStyle="{StaticResource CompaniesToAddTheme}"
-                      Background="Gray"
-                      BorderThickness="0" Height="200"
-                      HorizontalAlignment="Center"
+                      Background="Gainsboro"
+                      BorderThickness="0" 
+                      Height="600" Width="450"
+                      HorizontalAlignment="Left"
                       Margin="10">
+                <ListView.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </ListView.Resources>
             </ListView>
             
             <ListView ItemsSource="{Binding TrackedCompanies}"
                       ItemContainerStyle="{StaticResource TrackedCompaniesRemTheme}"
-                      Background="Red"
-                      BorderThickness="0" Height="200"
-                      HorizontalAlignment="Center"
-                      Margin="10">
+                      Background="Gainsboro"
+                      BorderThickness="0" 
+                      Height="600" Width="450"
+                      HorizontalAlignment="Right"
+                      Margin="10"
+                      Grid.Column="1">
+                <ListView.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </ListView.Resources>
             </ListView>
-        </StackPanel>
+            
+        </Grid>
+        
         
         
     </Grid>

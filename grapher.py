@@ -8,7 +8,7 @@ from predictor import get_training_data, get_predicted_rows_from_stock
 
 
 def get_grahp_for_stock_with_code(stock_code: str, date_limit: str) -> np.array:
-    dpi = 160
+    dpi = 80
     side_size = 5
 
     data = get_training_data(stock_code)

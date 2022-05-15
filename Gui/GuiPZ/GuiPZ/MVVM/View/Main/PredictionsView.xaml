@@ -5,57 +5,93 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:GuiPZ.MVVM.View.Main"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="620" d:DesignWidth="1200">
     <Grid>
         <StackPanel>
             <StackPanel Orientation="Horizontal">
                 <ListView ItemsSource="{Binding VeryBad}"
-                          ItemContainerStyle="{StaticResource TrackedCompaniesTempTheme}"
-                          Background="Red"
-                          BorderThickness="0" Height="200"
+                          ItemContainerStyle="{StaticResource VeryBadCompaniesTheme}"
+                          Background="DarkRed"
+                          BorderThickness="0" MinHeight="530"
                           HorizontalAlignment="Center"
-                          Margin="10">
+                          Margin="10"
+                          Width="220">
+                    <ListView.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </ListView.Resources>
                 </ListView>
                 
                 <ListView ItemsSource="{Binding Bad}"
-                          ItemContainerStyle="{StaticResource TrackedCompaniesTempTheme}"
-                          Background="Red"
-                          BorderThickness="0" Height="200"
+                          ItemContainerStyle="{StaticResource BadCompaniesTheme}"
+                          Background="Tomato"
+                          BorderThickness="0" MinHeight="530"
                           HorizontalAlignment="Center"
-                          Margin="10">
+                          Margin="10"
+                          Width="220">
+                    <ListView.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </ListView.Resources>
                 </ListView>
                 
                 <ListView ItemsSource="{Binding Neutral}"
-                          ItemContainerStyle="{StaticResource TrackedCompaniesTempTheme}"
-                          Background="Red"
-                          BorderThickness="0" Height="200"
+                          ItemContainerStyle="{StaticResource NeutralCompaniesTheme}"
+                          Background="Gray"
+                          BorderThickness="0" MinHeight="530"
                           HorizontalAlignment="Center"
-                          Margin="10">
+                          Margin="10"
+                          Width="220">
+                    <ListView.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </ListView.Resources>
                 </ListView>
                 
                 <ListView ItemsSource="{Binding Good}"
-                          ItemContainerStyle="{StaticResource TrackedCompaniesTempTheme}"
-                          Background="Red"
-                          BorderThickness="0" Height="200"
+                          ItemContainerStyle="{StaticResource GoodCompaniesTheme}"
+                          Background="Teal"
+                          BorderThickness="0" MinHeight="530"
                           HorizontalAlignment="Center"
-                          Margin="10">
+                          Margin="10"
+                          Width="220">
+                    <ListView.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </ListView.Resources>
                 </ListView>
                 
                 <ListView ItemsSource="{Binding VeryGood}"
-                          ItemContainerStyle="{StaticResource TrackedCompaniesTempTheme}"
-                          Background="Red"
-                          BorderThickness="0" Height="200"
+                          ItemContainerStyle="{StaticResource VeryGoodCompaniesTheme}"
+                          Background="Green"
+                          BorderThickness="0" MinHeight="530"
                           HorizontalAlignment="Center"
-                          Margin="10">
+                          Margin="10"
+                          Width="220">
+                    <ListView.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </ListView.Resources>
                 </ListView>
+                
             </StackPanel>
             
             <ListView ItemsSource="{Binding Unloaded}"
-                      ItemContainerStyle="{StaticResource TrackedCompaniesTempTheme}"
-                      Background="Red"
-                      BorderThickness="0" Height="200"
+                      ItemContainerStyle="{StaticResource UnloadedCompaniesTheme}"
+                      Background="Transparent"
+                      BorderThickness="0" MaxHeight="80"
                       HorizontalAlignment="Center"
-                      Margin="10">
+                      Width="1180">
+                <ListView.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </ListView.Resources>
             </ListView>
         </StackPanel>
     </Grid>
