@@ -15,7 +15,7 @@ public class HomeViewModel : ViewModelBase
     private DataExchanger _dataExchanger;
     public ICommand NavMainCommand { get; }
 
-    private Profile Profile => _dataContainer.CurrentProfile;
+    public Profile Profile => _dataContainer.CurrentProfile;
     public HomeViewModel(ContextNavigation mainNav, Profile profile, DataContainer dataContainer, DataExchanger dataExchanger)
     {
         _dataContainer = dataContainer;

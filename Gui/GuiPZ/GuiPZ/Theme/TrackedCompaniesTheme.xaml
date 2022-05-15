@@ -4,41 +4,30 @@
            x:Key="TrackedCompaniesTheme">
         <Style.Triggers>
             <Trigger Property="IsSelected" Value="True">
-                <Setter Property="Background" Value="#6535C5"/>
+                <Setter Property="Background" Value="Goldenrod"/>
             </Trigger>
         </Style.Triggers>
         
-        <Setter Property="Background" Value="#252525"/>
+        <Setter Property="Background" Value="Gold"/>
         <Setter Property="BorderThickness" Value="0"/>
         
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ListViewItem">
                     <Border Background="{TemplateBinding Background}"
-                            Height="60" Width="240"
+                            Height="80" Width="255"
                             CornerRadius="4"
                             Margin="2">
                         <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="60"/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
                             
-                            <Label Content="{Binding Name}"/>
-                            
-                            
-                            <!-- <Border Grid.Column="1" -->
-                            <!--         BorderThickness="5" -->
-                            <!--         BorderBrush="Transparent" -->
-                            <!--         Background="DarkGray"> -->
-                            <!--     <Label Content="{Binding Name}" -->
-                            <!--            VerticalAlignment="Center" -->
-                            <!--            HorizontalAlignment="Center" -->
-                            <!--            FontWeight="Bold"/> -->
-                            <!-- </Border> -->
-                            
-                            
-                            
+                            <Label Content="{Binding Name}"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Height="50"
+                                   Width="250"
+                                   HorizontalContentAlignment="Center"
+                                   FontSize="25"
+                                   FontWeight="Bold"/>
                         </Grid>
                     </Border>
                 </ControlTemplate>

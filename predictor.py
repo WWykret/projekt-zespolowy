@@ -180,6 +180,7 @@ def get_predicted_rows_from_stock(stock_symbol: str, pred_days: int, include_ori
 
     svr = load_model(stock_symbol)
     original_data = get_training_data(stock_symbol)
+    original_data = original_data.dropna()
 
     for i in range(pred_days):
         original_data = add_predicted_row_to_data(svr, original_data)

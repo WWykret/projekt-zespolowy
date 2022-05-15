@@ -46,6 +46,7 @@ def initializeCompanies():
     else:
         all_companies = namesScraper()
         all_companies.to_csv(company_list_as_csv)
+        update_last_scan_date_for_stock(pseudo_stock_name)
 
     dataContainer.companies = all_companies
 
@@ -83,7 +84,6 @@ def constructProfile(data):
 
 # GRAPHS
 def get_image(company_name):
-    print("LOL")
     companies = dataContainer.companies
     company_code = companies.loc[companies['Name'] == company_name]['Code'].iloc[0]
 
@@ -96,13 +96,11 @@ def get_image(company_name):
     for date_limit in ["all-time", "month", "year", "predicted"]:
         out.append(get_grahp_for_stock_with_code(company_code, date_limit))
 
-    print("xDD")
     return out
 
 
 # PREDICTIONS
 def get_prediction(company_name):
-    print("FUK")
     companies = dataContainer.companies
     company_code = companies.loc[companies['Name'] == company_name]['Code'].iloc[0]
 

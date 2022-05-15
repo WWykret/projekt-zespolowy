@@ -25,6 +25,13 @@
                  <ResourceDictionary Source="Theme/TrackedCompaniesRemTheme.xaml"/>
                  <ResourceDictionary Source="Theme/TrackedCompaniesTempTheme.xaml"/>
                  <ResourceDictionary Source="Theme/TrackedCompaniesTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/NeutralCompaniesTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/BadCompaniesTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/UnloadedCompaniesTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/VeryBadCompaniesTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/GoodCompaniesTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/VeryGoodCompaniesTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/PlotButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
              
              <DataTemplate DataType="{x:Type viewModel:Main.HomeViewModel}">

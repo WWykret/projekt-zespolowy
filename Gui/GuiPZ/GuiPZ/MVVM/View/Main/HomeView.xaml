@@ -9,16 +9,100 @@
     
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         
-        <Grid Background="Aqua">
-            <Button Background="Blue"
-                    Width="60"
+        <Grid Background="DimGray">
+            
+            <!-- <Grid.Background> -->
+            <!--     <LinearGradientBrush StartPoint="0 0" EndPoint="0 1"> -->
+            <!--         <LinearGradientBrush.GradientStops> -->
+            <!--             <GradientStop Offset="0.1" Color="Blue" /> -->
+            <!--             <GradientStop Offset="0.5" Color="Green" /> -->
+            <!--             <GradientStop Offset="1" Color="Red" /> -->
+            <!--         </LinearGradientBrush.GradientStops> -->
+            <!--     </LinearGradientBrush> -->
+            <!-- </Grid.Background> -->
+            
+            <Border Height="50" Width="200"
+                    CornerRadius="5"
+                    Margin="0"
+                    DataContext="{Binding Profile}"
+                    HorizontalAlignment="Right"
+                    Background="Gray">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                            
+                    <Border Width="40" Height="40"
+                            CornerRadius="10"
+                            HorizontalAlignment="Center"
+                            Grid.Column="0">
+                        <Border.Background>
+                            <ImageBrush Stretch="Fill" ImageSource="{Binding Img}"/>
+                        </Border.Background>
+                    </Border>
+                            
+                    <Border Grid.Column="1"
+                            BorderThickness="5"
+                            BorderBrush="Transparent"
+                            Background="DarkGray">
+                        <Label Content="{Binding Name}"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               FontWeight="Bold"/>
+                    </Border>
+                            
+                            
+                </Grid>
+            </Border>
+            
+            <Button Width="60" Height="40"
+                    Content="Logout"
                     Command="{Binding NavMainCommand}"
-                    Content="Back"
-                    HorizontalAlignment="Left"></Button>
+                    HorizontalAlignment="Left">
+                
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                
+                <Button.Style>
+                    
+
+                    
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="Maroon"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="Foreground" Value="DarkGray"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Margin" Value="5"/>
+                        
+                        
+        
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Brown"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                                    
+                </Button.Style>
+            </Button>
+            
             
             <StackPanel VerticalAlignment="Center"
                         Width="300"
@@ -27,17 +111,20 @@
                              Foreground="White"
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True"
-                             Command="{Binding PredictionsViewCommand}"/>
+                             Command="{Binding PredictionsViewCommand}"
+                             FontWeight="Bold"/>
                 
                 <RadioButton Content="User"
                              Foreground="White"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding UserViewCommand}"/>
+                             Command="{Binding UserViewCommand}"
+                             FontWeight="Bold"/>
                 
                 <RadioButton Content="Manage"
                              Foreground="White"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding ManageViewCommand}"/>
+                             Command="{Binding ManageViewCommand}"
+                             FontWeight="Bold"/>
             </StackPanel>
         </Grid>
         

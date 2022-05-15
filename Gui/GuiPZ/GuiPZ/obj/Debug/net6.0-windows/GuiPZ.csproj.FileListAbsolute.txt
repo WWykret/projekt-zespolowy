@@ -291,3 +291,10 @@ C:\Users\FPro\Desktop\PZ2.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-w
 C:\Users\FPro\Desktop\PZ2.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\FPro\Desktop\PZ2.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
 C:\Users\FPro\Desktop\PZ2.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\FPro\Desktop\PZ2.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\NeutralCompaniesTheme.baml
+C:\Users\FPro\Desktop\PZ2.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\BadCompaniesTheme.baml
+C:\Users\FPro\Desktop\PZ2.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\UnloadedCompaniesTheme.baml
+C:\Users\FPro\Desktop\PZ2.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\GoodCompaniesTheme.baml
+C:\Users\FPro\Desktop\PZ2.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\VeryBadCompaniesTheme.baml
+C:\Users\FPro\Desktop\PZ2.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\VeryGoodCompaniesTheme.baml
+C:\Users\FPro\Desktop\PZ2.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\PlotButtonTheme.baml
