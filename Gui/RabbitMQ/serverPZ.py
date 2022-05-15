@@ -12,8 +12,11 @@ from dataSource import namesScraper
 from profile import Profile
 
 from grapher import get_grahp_for_stock_with_code
-from predictor import get_predicted_rows_from_stock, has_training_data, save_training_data, download_training_data, is_model_trained, train_model
+from predictor import get_predicted_rows_from_stock, save_training_data, download_training_data, is_model_trained, train_model
+from utils import update_last_scan_date_for_stock, is_stock_data_up_to_date
+from os.path import isfile
 
+company_list_as_csv = 'companies.csv'
 
 def get_companies():
     out = []
@@ -35,8 +38,16 @@ def initializeData():
 
 
 def initializeCompanies():
-    dataContainer.companies = namesScraper()
+    pseudo_stock_name = 'all_companies'
+    all_companies = None
 
+    if is_stock_data_up_to_date(pseudo_stock_name) and isfile(company_list_as_csv):
+        all_companies = pd.read_csv(company_list_as_csv)
+    else:
+        all_companies = namesScraper()
+        all_companies.to_csv(company_list_as_csv)
+
+    dataContainer.companies = all_companies
 
 def initializeProfiles():
     path_to_file = 'profiles.data'
@@ -76,10 +87,8 @@ def get_image(company_name):
     companies = dataContainer.companies
     company_code = companies.loc[companies['Name'] == company_name]['Code'].iloc[0]
 
-    if not has_training_data(company_code):
-        download_training_data(company_code)
+    download_training_data(company_code)
 
-    # TODO
     if not is_model_trained(company_code):
         train_model(company_code, timed=False, verbose=False)
 
