@@ -143,6 +143,7 @@
     <ItemGroup>
       <PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.2" />
       <PackageReference Include="RabbitMQ.Client" Version="6.2.4" />
+      <PackageReference Include="System.Drawing.Common" Version="7.0.0-preview.4.22229.4" />
     </ItemGroup>
 
 </Project>

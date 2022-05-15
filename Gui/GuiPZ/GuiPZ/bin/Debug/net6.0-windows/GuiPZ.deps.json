@@ -9,7 +9,8 @@
       "GuiPZ/1.0.0": {
         "dependencies": {
           "Microsoft.Toolkit.Mvvm": "7.1.2",
-          "RabbitMQ.Client": "6.2.4"
+          "RabbitMQ.Client": "6.2.4",
+          "System.Drawing.Common": "7.0.0-preview.4.22229.4"
         },
         "runtime": {
           "GuiPZ.dll": {}
@@ -23,6 +24,22 @@
           }
         }
       },
+      "Microsoft.Win32.SystemEvents/7.0.0-preview.4.22229.4": {
+        "runtime": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.22904"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.22904"
+          }
+        }
+      },
       "RabbitMQ.Client/6.2.4": {
         "dependencies": {
           "System.Memory": "4.5.4",
@@ -32,6 +49,31 @@
           "lib/netstandard2.0/RabbitMQ.Client.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.2.4.0"
+          }
+        }
+      },
+      "System.Drawing.Common/7.0.0-preview.4.22229.4": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "7.0.0-preview.4.22229.4"
+        },
+        "runtime": {
+          "lib/net6.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.22904"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/net6.0/System.Drawing.Common.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.22904"
+          },
+          "runtimes/win/lib/net6.0/System.Drawing.Common.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.22904"
           }
         }
       },
@@ -52,12 +94,26 @@
       "path": "microsoft.toolkit.mvvm/7.1.2",
       "hashPath": "microsoft.toolkit.mvvm.7.1.2.nupkg.sha512"
     },
+    "Microsoft.Win32.SystemEvents/7.0.0-preview.4.22229.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tNduZUG9jz9LPbqAbLxtP46MdPa/TOekzRi2cXp4ZdA8dFsh0HFFH+qivuE7wiFnylMp2OrvCA1fCRmrmG1Skw==",
+      "path": "microsoft.win32.systemevents/7.0.0-preview.4.22229.4",
+      "hashPath": "microsoft.win32.systemevents.7.0.0-preview.4.22229.4.nupkg.sha512"
+    },
     "RabbitMQ.Client/6.2.4": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-ttM7F+Ymb00EyQ25UCC44djr5GN/+cZNey2B3xD6JdJQQx7UcCtHdKBCE09zcmWuB+Afp07tFzetE14l/U8xQw==",
       "path": "rabbitmq.client/6.2.4",
       "hashPath": "rabbitmq.client.6.2.4.nupkg.sha512"
+    },
+    "System.Drawing.Common/7.0.0-preview.4.22229.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dI5YqOCQ8553vJzCmOYs5E2ESCrWguFkQyzgPwYsadstawu+8iq4Z8euGGM1gNLnHrcH4/Z4fuTZmO7H+LexGA==",
+      "path": "system.drawing.common/7.0.0-preview.4.22229.4",
+      "hashPath": "system.drawing.common.7.0.0-preview.4.22229.4.nupkg.sha512"
     },
     "System.Memory/4.5.4": {
       "type": "package",

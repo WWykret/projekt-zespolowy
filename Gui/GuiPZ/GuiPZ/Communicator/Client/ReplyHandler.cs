@@ -100,8 +100,8 @@ public class ReplyHandler
         var companyName = message.Substring(0, message.IndexOf(':'));
         var messageRest = message.Substring(message.IndexOf(':') + 1);
 
-        var companyImageString = messageRest.Substring(0, message.IndexOf(':'));
-        var companyPredictionString = messageRest.Substring(message.IndexOf(':') + 1);
+        var companyImageString = messageRest.Substring(0, messageRest.IndexOf(':'));
+        var companyPredictionString = messageRest.Substring(messageRest.IndexOf(':') + 1);
         
         var  companyImg = JsonSerializer.Deserialize<List<List<byte>>>(companyImageString);
         var  companyPred = JsonSerializer.Deserialize<float>(companyPredictionString);

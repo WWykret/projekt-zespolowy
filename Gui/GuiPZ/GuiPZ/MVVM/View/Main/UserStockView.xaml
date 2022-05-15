@@ -10,7 +10,7 @@
         <StackPanel>
             <StackPanel Orientation="Horizontal">
                 <ListView ItemsSource="{Binding TrackedCompanies}"
-                          SelectedItem="{Binding SelectedCompany}"
+                          SelectedItem="{Binding SelectedCompany, Mode=TwoWay}"
                           ItemContainerStyle="{StaticResource TrackedCompaniesTheme}"
                           Background="Red"
                           BorderThickness="0" Height="200"
@@ -27,19 +27,27 @@
                 <RadioButton Content="1"
                              Foreground="White"
                              Style="{StaticResource MenuButtonTheme}"
-                             IsChecked="True"/>
+                             IsChecked="True"
+                             Command="{Binding ChangePicCommand}"
+                             CommandParameter="0"/>
                 
                 <RadioButton Content="2"
                              Foreground="White"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding ChangePicCommand}"
+                             CommandParameter="1"/>
                 
                 <RadioButton Content="3"
                              Foreground="White"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding ChangePicCommand}"
+                             CommandParameter="2"/>
             
                 <RadioButton Content="4"
                              Foreground="White"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding ChangePicCommand}"
+                             CommandParameter="3"/>
             </StackPanel>
         </StackPanel>
         
