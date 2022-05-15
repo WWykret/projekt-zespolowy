@@ -32,7 +32,7 @@
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
-                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="80"/>
                 </Grid.RowDefinitions>
                 
                 <Image Source="{Binding Plot}" Width="500" Height="500"/>

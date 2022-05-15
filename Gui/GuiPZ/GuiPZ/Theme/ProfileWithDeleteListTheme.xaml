@@ -15,19 +15,20 @@
             <Setter.Value>
                 <ControlTemplate TargetType="ListViewItem">
                     <Border Background="{TemplateBinding Background}"
-                            Height="60" Width="240"
+                            Height="80" Width="320"
                             CornerRadius="4"
                             Margin="2">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="70"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
                             
-                            <Border Width="50" Height="50"
+                            <Border Width="70" Height="70"
                                     CornerRadius="4"
                                     HorizontalAlignment="Center"
-                                    Grid.Column="0">
+                                    Grid.Column="0"
+                                    Margin="5">
                                 <Border.Background>
                                     <ImageBrush Stretch="Fill" ImageSource="{Binding Img}"/>
                                 </Border.Background>

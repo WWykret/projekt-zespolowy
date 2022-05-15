@@ -16,7 +16,16 @@
             
             <Button Command="{Binding NavMainCommand}"
                     VerticalAlignment="Center"
-                    HorizontalAlignment="Center">
+                    HorizontalAlignment="Center"
+                    Background="DarkBlue"
+                    Margin="25">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                
+                
                 <Button.Content>
                     <Border Height="80" Width="320"
                             CornerRadius="4"
@@ -41,7 +50,7 @@
                             <Border Grid.Column="1"
                                     BorderThickness="5"
                                     BorderBrush="Transparent"
-                                    Background="DarkGray">
+                                    Background="Blue">
                                 <Label Content="{Binding Name}"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Center"
@@ -61,7 +70,7 @@
                       SelectedItem="{Binding SelectedProfile}"
                       ItemContainerStyle="{StaticResource ProfileWithDeleteListTheme}"
                       Background="Gray"
-                      BorderThickness="0" Height="200"
+                      BorderThickness="0" Height="250" Width="350"
                       HorizontalAlignment="Center">
             </ListView>
             
