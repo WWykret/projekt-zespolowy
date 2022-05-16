@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1x2w/37kNm+9HD048xeqJzb0ClMPR+GQQXSOVMTgBGGk0oc+E1C+qK7RwyL/OrNd60dPe34EwquU7c4LSm2IGw==",
+  "dgSpecHash": "rNrJ9qcZ8+pjlaI6GsTtCjQxdK+LEjcfMw3bq7USApKeZhz3PEh/XTqXMblh9+BtirzP5hF1N37EM+noYc/AcQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\FPro\\Desktop\\PZ2.0\\projekt-zespolowy\\Gui\\GuiPZ\\GuiPZ\\GuiPZ.csproj",
+  "projectFilePath": "C:\\Users\\FPro\\Desktop\\PZ4.0\\projekt-zespolowy\\Gui\\GuiPZ\\GuiPZ\\GuiPZ.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\FPro\\.nuget\\packages\\microsoft.toolkit.mvvm\\7.1.2\\microsoft.toolkit.mvvm.7.1.2.nupkg.sha512",
     "C:\\Users\\FPro\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0-preview.4.22229.4\\microsoft.win32.systemevents.7.0.0-preview.4.22229.4.nupkg.sha512",

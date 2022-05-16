@@ -298,3 +298,82 @@ C:\Users\FPro\Desktop\PZ2.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-w
 C:\Users\FPro\Desktop\PZ2.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\VeryBadCompaniesTheme.baml
 C:\Users\FPro\Desktop\PZ2.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\VeryGoodCompaniesTheme.baml
 C:\Users\FPro\Desktop\PZ2.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\PlotButtonTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Assets\MainBackground.png
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Assets\Icon.png
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Assets\Placeholder.png
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\GuiPZ.exe
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\GuiPZ.deps.json
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\GuiPZ.runtimeconfig.json
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\GuiPZ.dll
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\GuiPZ.pdb
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Microsoft.Toolkit.Mvvm.dll
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Microsoft.Win32.SystemEvents.dll
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\RabbitMQ.Client.dll
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\System.Drawing.Common.dll
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\GuiPZ.csproj.AssemblyReference.cache
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\AvatarListTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\BadCompaniesTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\BasicButtonTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\CompaniesToAddTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\GoodCompaniesTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\MenuButtonTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\NeutralCompaniesTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\PlotButtonTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\ProfileButtonTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\ProfileListTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\ProfileWithDeleteListTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\ScrollbarTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\TextBoxRegistrationTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\TrackedCompaniesRemTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\TrackedCompaniesTempTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\TrackedCompaniesTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\UnloadedCompaniesTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\VeryBadCompaniesTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\VeryGoodCompaniesTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\Theme\WindowButtonTheme.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MVVM\View\Login\LoginView.g.cs
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MVVM\View\Login\ProfilesView.g.cs
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MVVM\View\Login\RegistrationView.g.cs
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MVVM\View\Main\HomeView.g.cs
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MVVM\View\Main\ManageStockView.g.cs
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MVVM\View\Main\PredictionsView.g.cs
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MVVM\View\Main\UserStockView.g.cs
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\GuiPZ_Content.g.cs
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\GuiPZ_MarkupCompile.cache
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\GuiPZ_MarkupCompile.lref
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\App.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MVVM\View\Login\LoginView.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MVVM\View\Login\ProfilesView.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MVVM\View\Login\RegistrationView.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MVVM\View\Main\HomeView.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MVVM\View\Main\ManageStockView.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MVVM\View\Main\PredictionsView.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\MVVM\View\Main\UserStockView.baml
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\GuiPZ.g.resources
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\GuiPZ.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\GuiPZ.AssemblyInfoInputs.cache
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\GuiPZ.AssemblyInfo.cs
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\GuiPZ.csproj.CoreCompileInputs.cache
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\GuiPZ.csproj.CopyComplete
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\GuiPZ.dll
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\refint\GuiPZ.dll
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\GuiPZ.pdb
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\GuiPZ.genruntimeconfig.cache
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\obj\Debug\net6.0-windows\ref\GuiPZ.dll
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Avatars\avataaars.png
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Avatars\avataaars (3).png
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Avatars\avataaars (7).png
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Avatars\avataaars (4).png
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Avatars\avataaars (9).png
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Avatars\avataaars (5).png
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Avatars\avataaars (2).png
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Avatars\avataaars (8).png
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Avatars\avataaars (1).png
+C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows\Data\Images\Avatars\avataaars (6).png

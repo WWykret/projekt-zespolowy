@@ -15,113 +15,32 @@
 
     <ItemGroup>
       <None Remove="Data\Images\Avatars\Akszyli.png" />
-      <Content Include="Data\Images\Avatars\Akszyli.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\Bakalar.png" />
-      <Content Include="Data\Images\Avatars\Bakalar.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\Nfd.png" />
-      <Content Include="Data\Images\Avatars\Nfd.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\Wojak.png" />
-      <Content Include="Data\Images\Avatars\Wojak.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\Chicken.png" />
-      <Content Include="Data\Images\Avatars\Chicken.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\Dog.png" />
-      <Content Include="Data\Images\Avatars\Dog.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\Funi.png" />
-      <Content Include="Data\Images\Avatars\Funi.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\GenericAvatar.png" />
-      <Content Include="Data\Images\Avatars\GenericAvatar.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\GigaAvatar.png" />
-      <Content Include="Data\Images\Avatars\GigaAvatar.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\GigaDawid.png" />
-      <Content Include="Data\Images\Avatars\GigaDawid.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\Jonathan.png" />
-      <Content Include="Data\Images\Avatars\Jonathan.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\Nfd2.png" />
-      <Content Include="Data\Images\Avatars\Nfd2.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\Nft.jpg" />
-      <Content Include="Data\Images\Avatars\Nft.jpg">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\NFTW.png" />
-      <Content Include="Data\Images\Avatars\NFTW.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\Sop0.jpg" />
-      <Content Include="Data\Images\Avatars\Sop0.jpg">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\Sop2Lore.png" />
-      <Content Include="Data\Images\Avatars\Sop2Lore.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\Sopowicz2.png" />
-      <Content Include="Data\Images\Avatars\Sopowicz2.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\Viju.png" />
-      <Content Include="Data\Images\Avatars\Viju.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\Witam.png" />
-      <Content Include="Data\Images\Avatars\Witam.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\WojakZadowolony.png" />
-      <Content Include="Data\Images\Avatars\WojakZadowolony.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\Wut.png" />
-      <Content Include="Data\Images\Avatars\Wut.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\PanSaulutki.png" />
-      <Content Include="Data\Images\Avatars\PanSaulutki.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\PanHankutki.png" />
-      <Content Include="Data\Images\Avatars\PanHankutki.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\PanBialutki.png" />
-      <Content Include="Data\Images\Avatars\PanBialutki.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\Jeremiasz.png" />
-      <Content Include="Data\Images\Avatars\Jeremiasz.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\Gustavo.png" />
-      <Content Include="Data\Images\Avatars\Gustavo.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Avatars\Majk.png" />
-      <Content Include="Data\Images\Avatars\Majk.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <None Remove="Data\Images\Assets\MainBackground.png" />
       <Content Include="Data\Images\Assets\MainBackground.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -135,7 +54,44 @@
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <None Remove="Data\Images\Avatars\FeaturingDanteFromDMC.png" />
-      <Content Include="Data\Images\Avatars\FeaturingDanteFromDMC.png">
+      <None Remove="Data\Images\Avatars\avataaars.png" />
+      <Content Include="Data\Images\Avatars\avataaars.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\avataaars (3).png" />
+      <Content Include="Data\Images\Avatars\avataaars (3).png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\avataaars (7).png" />
+      <Content Include="Data\Images\Avatars\avataaars (7).png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\avataaars (4).png" />
+      <Content Include="Data\Images\Avatars\avataaars (4).png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\avataaars (9).png" />
+      <Content Include="Data\Images\Avatars\avataaars (9).png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\avataaars (5).png" />
+      <Content Include="Data\Images\Avatars\avataaars (5).png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\avataaars (2).png" />
+      <Content Include="Data\Images\Avatars\avataaars (2).png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\avataaars (8).png" />
+      <Content Include="Data\Images\Avatars\avataaars (8).png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\avataaars (1).png" />
+      <Content Include="Data\Images\Avatars\avataaars (1).png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\Images\Avatars\avataaars (6).png" />
+      <Content Include="Data\Images\Avatars\avataaars (6).png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
     </ItemGroup>

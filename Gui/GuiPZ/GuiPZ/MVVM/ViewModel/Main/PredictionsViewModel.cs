@@ -53,16 +53,16 @@ public class PredictionsViewModel : ViewModelBase
             {
                 switch(company.Prediction)
                 {
-                    case <= -100:
+                    case <= -0.05F:
                         VeryBad.Add(company);
                         break;
-                    case > -100 and <= -5:
+                    case > -0.05F and <= -0.005F:
                         Bad.Add(company);
                         break;
-                    case > -5 and <= 5:
+                    case > -0.005F and <= 0.005F:
                         Neutral.Add(company);
                         break;
-                    case > 5 and <= 100:
+                    case > 0.005F and <= 0.05F:
                         Neutral.Add(company);
                         break;
                     default:

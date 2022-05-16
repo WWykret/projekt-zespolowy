@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GuiPZ"
         xmlns:viewModel="clr-namespace:GuiPZ.MVVM.ViewModel"
         mc:Ignorable="d"
-        Title="SOP Stocks" Height="700" Width="1200"
+        Title="Stock Sense" Height="700" Width="1200"
         ResizeMode="NoResize"
         WindowStyle="None"
         AllowsTransparency="True"
@@ -31,7 +31,7 @@
               MouseDown="Grid_MouseDown"
               HorizontalAlignment="Stretch">
 
-            <Label Content="SOP Stocks"
+            <Label Content="Stock Sense"
                    Foreground="Gold"
                    FontWeight="SemiBold"
                    FontFamily="Font/#Dosis"
