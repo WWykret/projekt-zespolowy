@@ -4,7 +4,7 @@ timeout 10
 START "server_stock" /MIN ..\Predictor\predictor_start.bat
 timeout 3
 
-cd ..\Gui\GuiPZ\GuiPZ\bin\Debug\net6.0-windows
+cd ..\Gui\GuiPZ\GuiPZ\bin\Release\net6.0-windows
 CALL GuiPZ.exe
 
 taskkill /FI "WindowTitle eq mq_stock*" /T /F
