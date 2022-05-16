@@ -12,7 +12,7 @@ from dataSource import namesScraper
 from profile import Profile
 
 from grapher import get_grahp_for_stock_with_code
-from predictor import get_predicted_rows_from_stock, save_training_data, download_training_data, is_model_trained, train_model
+from predictor import get_predicted_rows_from_stock, save_training_data, download_training_data, is_model_trained, train_model, get_training_data
 from utils import update_last_scan_date_for_stock, is_stock_data_up_to_date
 from os.path import isfile
 
@@ -105,8 +105,12 @@ def get_prediction(company_name):
     company_code = companies.loc[companies['Name'] == company_name]['Code'].iloc[0]
 
     prediction = get_predicted_rows_from_stock(company_code, 1, False)
+    predicted_price = prediction["Zamkniecie"].iloc[0]
 
-    return prediction["Zamkniecie"].iloc[0]
+    historical_data = get_training_data(company_code)
+    curr_price = historical_data["Zamkniecie"].iloc[-1]
+
+    return (predicted_price - curr_price) / curr_price
 
 
 def handler(message, ch, properties):
