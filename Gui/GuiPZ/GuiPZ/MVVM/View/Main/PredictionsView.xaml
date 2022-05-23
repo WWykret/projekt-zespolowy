@@ -12,7 +12,7 @@
                 <ListView ItemsSource="{Binding VeryBad}"
                           ItemContainerStyle="{StaticResource VeryBadCompaniesTheme}"
                           Background="DarkRed"
-                          BorderThickness="0" MinHeight="530"
+                          BorderThickness="0" MinHeight="530" MaxHeight="550"
                           HorizontalAlignment="Center"
                           Margin="10"
                           Width="220">
@@ -26,7 +26,7 @@
                 <ListView ItemsSource="{Binding Bad}"
                           ItemContainerStyle="{StaticResource BadCompaniesTheme}"
                           Background="Tomato"
-                          BorderThickness="0" MinHeight="530"
+                          BorderThickness="0" MinHeight="530" MaxHeight="550"
                           HorizontalAlignment="Center"
                           Margin="10"
                           Width="220">
@@ -40,7 +40,7 @@
                 <ListView ItemsSource="{Binding Neutral}"
                           ItemContainerStyle="{StaticResource NeutralCompaniesTheme}"
                           Background="Gray"
-                          BorderThickness="0" MinHeight="530"
+                          BorderThickness="0" MinHeight="530" MaxHeight="550"
                           HorizontalAlignment="Center"
                           Margin="10"
                           Width="220">
@@ -54,7 +54,7 @@
                 <ListView ItemsSource="{Binding Good}"
                           ItemContainerStyle="{StaticResource GoodCompaniesTheme}"
                           Background="Teal"
-                          BorderThickness="0" MinHeight="530"
+                          BorderThickness="0" MinHeight="530" MaxHeight="550"
                           HorizontalAlignment="Center"
                           Margin="10"
                           Width="220">
@@ -68,7 +68,7 @@
                 <ListView ItemsSource="{Binding VeryGood}"
                           ItemContainerStyle="{StaticResource VeryGoodCompaniesTheme}"
                           Background="Green"
-                          BorderThickness="0" MinHeight="530"
+                          BorderThickness="0" MinHeight="530" MaxHeight="550"
                           HorizontalAlignment="Center"
                           Margin="10"
                           Width="220">

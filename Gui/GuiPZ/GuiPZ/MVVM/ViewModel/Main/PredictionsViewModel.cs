@@ -63,7 +63,7 @@ public class PredictionsViewModel : ViewModelBase
                         Neutral.Add(company);
                         break;
                     case > 0.005F and <= 0.05F:
-                        Neutral.Add(company);
+                        Good.Add(company);
                         break;
                     default:
                         VeryGood.Add(company);

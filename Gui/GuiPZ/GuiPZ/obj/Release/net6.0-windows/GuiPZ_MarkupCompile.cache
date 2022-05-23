@@ -12,7 +12,7 @@ TRACE;RELEASE;NET;NET6_0;NETCOREAPP
 C:\Users\FPro\Desktop\PZ4.0\projekt-zespolowy\Gui\GuiPZ\GuiPZ\App.xaml
 281360480032
 131982467598
-35-18373038
+36-1781998048
 1972048187523
 MainWindow.xaml;MVVM\View\Login\LoginView.xaml;MVVM\View\Login\ProfilesView.xaml;MVVM\View\Login\RegistrationView.xaml;MVVM\View\Main\HomeView.xaml;MVVM\View\Main\ManageStockView.xaml;MVVM\View\Main\PredictionsView.xaml;MVVM\View\Main\UserStockView.xaml;Theme\AvatarListTheme.xaml;Theme\BadCompaniesTheme.xaml;Theme\BasicButtonTheme.xaml;Theme\CompaniesToAddTheme.xaml;Theme\GoodCompaniesTheme.xaml;Theme\MenuButtonTheme.xaml;Theme\NeutralCompaniesTheme.xaml;Theme\PlotButtonTheme.xaml;Theme\ProfileButtonTheme.xaml;Theme\ProfileListTheme.xaml;Theme\ProfileWithDeleteListTheme.xaml;Theme\ScrollbarTheme.xaml;Theme\TextBoxRegistrationTheme.xaml;Theme\TrackedCompaniesRemTheme.xaml;Theme\TrackedCompaniesTempTheme.xaml;Theme\TrackedCompaniesTheme.xaml;Theme\UnloadedCompaniesTheme.xaml;Theme\VeryBadCompaniesTheme.xaml;Theme\VeryGoodCompaniesTheme.xaml;Theme\WindowButtonTheme.xaml;
 

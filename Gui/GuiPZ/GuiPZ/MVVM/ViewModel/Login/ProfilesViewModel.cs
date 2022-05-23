@@ -8,6 +8,7 @@ using GuiPZ.Container;
 using GuiPZ.MVVM.Model;
 using GuiPZ.MVVM.ViewModel.Main;
 using GuiPZ.Navigation;
+using GuiPZ.Utils;
 
 namespace GuiPZ.MVVM.ViewModel.Login;
 
@@ -21,7 +22,7 @@ public class ProfilesViewModel : ViewModelBase
     
     public ICommand DeleteProfileCommand { get; }
 
-    public ObservableCollection<Profile> Profiles => _dataContainer.Profiles;
+    public MTObservableCollection<Profile> Profiles => _dataContainer.Profiles;
 
 
 
@@ -44,7 +45,12 @@ public class ProfilesViewModel : ViewModelBase
         _dataContainer = dataContainer;
         _dataExchanger = dataExchanger;
         
-        NavMainCommand = new NavCommand<HomeViewModel>(mainNav,() => new HomeViewModel(mainNav, SelectedProfile, _dataContainer, _dataExchanger));
+        NavMainCommand = new NavCommand<ViewModelBase>(mainNav,() =>
+        {
+            if (_selectedProfile == null || _dataContainer.Companies == null || _dataContainer.Companies.Count == 0)
+                return mainNav.CurrentViewModel;
+            return new HomeViewModel(mainNav, SelectedProfile, _dataContainer, _dataExchanger);
+        });
         
         RegistrationViewCommand =
             new NavCommand<RegistrationViewModel>(loginNav, () => new RegistrationViewModel(mainNav, loginNav, _dataContainer, _dataExchanger));

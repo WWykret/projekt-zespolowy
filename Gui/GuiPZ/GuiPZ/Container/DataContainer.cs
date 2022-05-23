@@ -4,13 +4,14 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using GuiPZ.MVVM.Model;
+using GuiPZ.Utils;
 
 namespace GuiPZ.Container;
 
 public class DataContainer
 {
-    public ObservableCollection<Profile> Profiles { get; set; }
-    public ObservableCollection<Company> Companies { get; set; }
+    public MTObservableCollection<Profile> Profiles { get; set; }
+    public MTObservableCollection<Company> Companies { get; set; }
     public List<Avatar> Avatars { get; set; }
     
     public Profile CurrentProfile { get; set; }
